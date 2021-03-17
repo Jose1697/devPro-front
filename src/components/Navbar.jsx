@@ -4,6 +4,7 @@ import './styles/Navbar.css';
 import Logo from './images/logo-devpro.gif';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHome } from "@fortawesome/free-solid-svg-icons";
+
 function Navbar() {
 
     
@@ -42,14 +43,24 @@ function Navbar() {
                   </a>
                 </li>
                 <li className="nav-item">
+                  
                   <a className="nav-link" href="#Nosotros">
                     Nosotros
                   </a>
                 </li>
-                <li className="nav-item">
-                  <a className="nav-link" href="#Empresas">
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" id="navbardrop" data-toggle="dropdown">
                     Empresas y Entidades
                   </a>
+                 
+                  <div class="dropdown-menu">
+                    <a class="dropdown-item" href="#Formulacion">Formulacion de Proyectos</a>
+                    <a class="dropdown-item" href="#Talleres">Talleres y cursos de Innovacion</a>
+                    <a class="dropdown-item" href="#Talleres">Talleres y cursos de Innovacion</a>
+                    <a class="dropdown-item" href="#Talleres">Talleres y cursos de Innovacion</a>
+                    <a class="dropdown-item" href="#Talleres">Talleres y cursos de Innovacion</a>
+                   
+                  </div>
                 </li>
                 <li className="nav-item">
                   <a className="nav-link" href="#Proyectos">
