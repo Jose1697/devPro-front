@@ -1,47 +1,68 @@
-import React from 'react';
+import React, {useState}from 'react';
+import '../components/styles/Login.css'
+import {Link} from 'react-router-dom';
 
 
-const Login = () => {
+const Login = (props) => {
+
+    const [form, setValues] = useState({
+        email:'',
+    })
+
+    const handleInput = event => {
+        setValues({
+            ...form,
+            [event.target.name]: event.target.value
+        })
+    }
+
+    const handleSubmit = event => {
+        event.preventDefault();
+        console.log(form);
+        props.history.push('/')
+
+    }
 
     return (
-      <section className="login">
+        <section className="login">
         <div className="login__container">
-          <h2>Inicia Sesión</h2>
-          <form>
-            <div className="rowl">
-              <div className="col-xs">
-                <mat-form-field>
-                  <input
-                    placeholder="Nombre de Usuario"
-                    formcontrolname="username"
-                    matinput
-                    type="email"
-                  />
-                </mat-form-field>
-              </div>
-            </div>
-            <div className="rowl">
-              <div className="col-xs">
-                <mat-form-field>
-                  <input
+            
+            <h2 className="title">Inicia Sesión</h2>
+            
+            <form className="login__container--form" onSubmit={handleSubmit}>
+                <input 
+                    name="email"
+                    className="input"  
+                    type="text" 
+                    placeholder="Correo"
+                    onChange={handleInput}
+                />
+
+                <input 
+                    email="password"
+                    className="input"  
+                    type="password" 
                     placeholder="Contraseña"
-                    formcontrolname="password"
-                    matinput
-                    type="password"
-                  />
-                </mat-form-field>
-              </div>
-            </div>
-            <button className="button" type="submit">
-              Iniciar Sesion
-            </button>
-          </form>
-          <p>
-            No tienes ninguna cuenta{" "}
-            <a routerlink="/user/register">Regístrate</a>
-          </p>
+                    onChange={handleInput}
+                />
+                <button className="button">Iniciar sesión</button>
+                <div className="login__container--remember">
+                    <label>
+                        <input type="checkbox" name="" id="cbox1" value="checkbox"/>Recuérdame
+                    </label>
+                    <a href="">Olvidé mi contraseña</a>
+                </div>
+            </form>
+            
+            <p className="login__container--register">No tienes ninguna cuenta 
+                <Link to="/register">
+                    Registrate
+                </Link>
+                
+            </p>
         </div>
-      </section>
+
+    </section>
     );
 }
 
