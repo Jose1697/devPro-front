@@ -2,7 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './styles/Navbar.css';
 import Logo from './images/logo-devpro.gif';
-
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faHome } from "@fortawesome/free-solid-svg-icons";
 function Navbar() {
 
     
@@ -36,6 +37,7 @@ function Navbar() {
               <ul className="navbar-nav ml-auto">
                 <li className="nav-item">
                   <a className="nav-link" href="Home">
+                  <FontAwesomeIcon icon={faHome} />
                     Home<span className="sr-only">(current)</span>
                   </a>
                 </li>
