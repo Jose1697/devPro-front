@@ -36,33 +36,33 @@ function Navbar() {
             >
               <ul className="navbar-nav ml-auto">
                 <li className="nav-item">
-                  <a className="nav-link" href="Home">
+                  <a className="nav-link" href="#hero">
                   <FontAwesomeIcon icon={faHome} />
                     Home<span className="sr-only">(current)</span>
                   </a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="Nosotros">
+                  <a className="nav-link" href="#Nosotros">
                     Nosotros
                   </a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="Empresas">
+                  <a className="nav-link" href="#Empresas">
                     Empresas y Entidades
                   </a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="Proyectos">
+                  <a className="nav-link" href="#Proyectos">
                     Proyectos
                   </a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="Expertos">
+                  <a className="nav-link" href="#Expertos">
                     Expertos
                   </a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="Contacto">
+                  <a className="nav-link" href="#Contacto">
                     Contacto
                   </a>
                 </li>
