@@ -37,14 +37,14 @@ function Navbar() {
             >
               <ul className="navbar-nav ml-auto">
                 <li className="nav-item">
-                  <a className="nav-link" href="#hero">
+                  <a className="nav-link" href="/">
                   <FontAwesomeIcon icon={faHome} />
                     Home<span className="sr-only">(current)</span>
                   </a>
                 </li>
                 <li className="nav-item">
                   
-                  <a className="nav-link" href="#Nosotros">
+                  <a className="nav-link" href="Nosotros">
                     Nosotros
                   </a>
                 </li>
@@ -63,17 +63,17 @@ function Navbar() {
                   </div>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="#Proyectos">
+                  <a className="nav-link" href="Proyectos">
                     Proyectos
                   </a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="#Expertos">
+                  <a className="nav-link" href="Expertos">
                     Expertos
                   </a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="#Contacto">
+                  <a className="nav-link" href="Contacto">
                     Contacto
                   </a>
                 </li>
