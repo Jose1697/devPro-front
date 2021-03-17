@@ -35,25 +35,36 @@ function Navbar() {
             >
               <ul className="navbar-nav ml-auto">
                 <li className="nav-item">
-                  <a className="nav-link" href="#hero">
+                  <a className="nav-link" href="Home">
                     Home<span className="sr-only">(current)</span>
                   </a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="#proyectos">
-                    About
+                  <a className="nav-link" href="Nosotros">
+                    Nosotros
                   </a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="#tecnologia">
-                    Products
+                  <a className="nav-link" href="Empresas">
+                    Empresas y Entidades
                   </a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="#trabajo">
-                    Store
+                  <a className="nav-link" href="Proyectos">
+                    Proyectos
                   </a>
                 </li>
+                <li className="nav-item">
+                  <a className="nav-link" href="Expertos">
+                    Expertos
+                  </a>
+                </li>
+                <li className="nav-item">
+                  <a className="nav-link" href="Contacto">
+                    Contacto
+                  </a>
+                </li>
+               
               </ul>
             </div>
           </div>
