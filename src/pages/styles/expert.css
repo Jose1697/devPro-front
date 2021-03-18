@@ -32,4 +32,11 @@
     margin: 40px auto;
     border-top: 4px solid #ebb129;
   }
-  
+  #columnas{
+    column-count:2;
+    column-gap:20px;
+   /* column-rule:4px dotted gray;*/
+ }
+ #Centrado{
+  margin-left: 250px;
+ }
