@@ -16,4 +16,20 @@
       color:darkcyan;
       font-size: 140px;
   }
+  .titulo{
+    font-size: 100px;
+    text-align:center;
+    
+  }
+  .expert_container {
+    width: 100%;
+    max-width: 3000px;
+    margin: 250px;
+    margin-top: 0 ;
+  }
+  .titulo2{
+    width:100px;
+    margin: 40px auto;
+    border-top: 4px solid #ebb129;
+  }
   
