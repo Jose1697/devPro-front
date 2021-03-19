@@ -1,6 +1,7 @@
 import React from 'react';
 import Navbar from '../components/Navbar'
-import ListProyectos from '../components/ListProyectos'
+import Buscador from '../components/Buscador'
+import './styles/proyect.css'
 
 class Proyecto extends React.Component{
    render(){
@@ -9,7 +10,7 @@ class Proyecto extends React.Component{
             
         <Navbar />
         <div className="Fondo1">
-          < ListProyectos/>
+          < Buscador/>
         </div>
          </div>
        )

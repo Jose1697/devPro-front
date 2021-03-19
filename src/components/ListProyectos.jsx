@@ -2,19 +2,18 @@ import React from 'react';
 import './styles/proyectList.css'
 
 
-class Proyecto extends React.Component{
+class ListProyectos extends React.Component{
    render(){
        return(
         <div  className="Fondo">
             
        
        
-          holaseee
-       
+            
          </div>
        )
    }
 }
 
 
-export default Proyecto;
+export default ListProyectos;
