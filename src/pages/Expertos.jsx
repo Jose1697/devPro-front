@@ -1,7 +1,9 @@
 import React from 'react';
 import Navbar from '../components/Navbar'
 import './styles/expert.css';
-import ExpertoList from '../components/ExpertoList'
+
+import ExpertoList from '../components/ExpertoList';
+
 class Expertos extends React.Component{
     state = {
         data: [
@@ -97,7 +99,8 @@ class Expertos extends React.Component{
         <div className="expert_container">
         <ExpertoList lista={this.state.data}/>
         </div>
-         </div>
+       
+        </div>
        )
    }
 }
