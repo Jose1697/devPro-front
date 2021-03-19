@@ -1,7 +1,7 @@
 import React from 'react';
 import './styles/proyectList.css'
 
-class ListItaDocente extends React.Component {
+class ListItaProyecto extends React.Component {
     render() {
       return (
         <div >
@@ -41,7 +41,7 @@ class ListProyectos extends React.Component{
           {this.props.lista.map(badge => {
             return (
               <div id="carousel-item" key={badge.id}>
-                <ListItaDocente badge={badge} />
+                <ListItaProyecto badge={badge} />
               </div>
             );
           })}
