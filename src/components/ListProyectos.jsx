@@ -30,14 +30,7 @@ class ListProyectos extends React.Component{
      
         <div >
        
-          {this.props.lista.map(badge => {
-            return (
-              <div id="caja1" key={badge.id}>
-                <ListItaDocente badge={badge} />
-              </div>
-            );
-          })}
-       
+          
       </div>
        
        )
