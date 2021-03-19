@@ -44,9 +44,9 @@ function Navbar() {
                 </li>
                 <li className="nav-item">
                   
-                  <a className="nav-link" href="Nosotros">
+                  <Link className="nav-link" to="/Nosotros">
                     Nosotros
-                  </a>
+                  </Link>
                 </li>
                 <li class="nav-item dropdown">
                   <a class="nav-link dropdown-toggle" id="navbardrop" data-toggle="dropdown">
@@ -63,19 +63,19 @@ function Navbar() {
                   </div>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="Proyectos">
+                  <Link className="nav-link" to="/Proyectos">
                     Proyectos
-                  </a>
+                  </Link>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="Expertos">
+                  <Link className="nav-link" to="/Expertos">
                     Expertos
-                  </a>
+                  </Link>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="Contacto">
+                  <Link className="nav-link" to="/Contacto">
                     Contacto
-                  </a>
+                  </Link>
                 </li>
                 <li className="sesion">
                   <Link  class="btn btn-success" to="/login">Iniciar Sesion</Link>
