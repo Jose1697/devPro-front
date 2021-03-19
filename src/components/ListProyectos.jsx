@@ -30,7 +30,8 @@ class ListProyectos extends React.Component{
      
         <div >
        
-          
+         
+       
       </div>
        
        )
