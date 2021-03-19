@@ -2,6 +2,7 @@
     width: 100%;
     max-width: 1400px;
     height:100%;
+    opacity: 0.3;
     max-height:500px;
     margin: 0 ;
     padding: 0 ;
@@ -25,6 +26,7 @@
   .expert_container {
     width: 100%;
     max-width: 1050px;
+    
     margin: 250px;
     margin-top: 0 ;
     background-color:aqua ;
