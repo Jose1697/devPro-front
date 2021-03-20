@@ -9,8 +9,7 @@ class Nosotros extends React.Component {
         return (
             <div>
                 <Navbar />
-                <br/>
-                <div className="container">
+                <div className="container nosotros mt-5 mb-3">
                     <div className="row">
                         <div className="col-12">
                             <div className="card mb-3">
@@ -47,7 +46,12 @@ class Nosotros extends React.Component {
                                 <img src="https://ilp-ala.org/wp-content/uploads/2018/07/iconoMISION-387.png" className="card-img-top" alt="..." />
                                 <div className="card-body">
                                     <h5 className="card-title">Nuestra Misión</h5>
-                                    <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                    <p className="card-text">Ser una incubadora comprometida con el progreso social, 
+                                                            impulsando el desarrollo y puesta en marcha de negocios 
+                                                            basados en áreas de oportunidad y necesidades de la comunidad, 
+                                                            proveyendo servicios de capacitación, consultoría, asesoría, y 
+                                                            redes empresariales.
+                                    </p>
                                 </div>
                             </div>               
                         </div>
@@ -56,14 +60,16 @@ class Nosotros extends React.Component {
                                 <img src="https://ilp-ala.org/wp-content/uploads/2018/07/iconoVISION-387.png" className="card-img-top" alt="..." />
                                 <div className="card-body">
                                     <h5 className="card-title">Nuestra Visión</h5>
-                                    <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                    <p className="card-text">Ser una Incubadora, generadora de un ambiente social 
+                                                            y económico de crecimiento y oportunidades para los habitantes 
+                                                            de la sociedad, impulsando el desarrollo empresarial regional y nacional.
+                                    </p>
                                 </div>
                             </div>
                         </div>
                     </div> 
                 </div>
 
-                <br/>
 
                 <Footer/>
             </div>
