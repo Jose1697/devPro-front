@@ -9,7 +9,7 @@ class Nosotros extends React.Component {
         return (
             <div>
                 <Navbar />
-                <div className="container nosotros mt-5 mb-3">
+                <div className="container nosotros">
                     <div className="row">
                         <div className="col-12">
                             <div className="card mb-3">

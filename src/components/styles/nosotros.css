@@ -1,6 +1,6 @@
 .nosotros{
     display: block;
-    height: calc(100vh - 186px);
+    /* height: calc(100vh - 186px); */
 }
 
 .logo-img{
