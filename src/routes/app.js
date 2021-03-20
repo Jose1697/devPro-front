@@ -6,6 +6,7 @@ import Login from '../pages/Login'
 import Nosotros from '../pages/Nosotros'
 import Proyecto from '../pages/Proyecto'
 import Register from '../pages/Register'
+import Emprendedor from '../pages/Emprendedor'
 const App = () => (
     <BrowserRouter>
         
@@ -16,6 +17,7 @@ const App = () => (
             <Route exact path="/register" component={Register}/>
             <Route exact path="/Proyectos" component={Proyecto}/>
             <Route exact path="/Nosotros" component={Nosotros}/>
+            <Route exact path="/Emprendedor" component={Emprendedor}/>
          </Switch>
         
         
