@@ -1,0 +1,20 @@
+.container{
+    display: block;
+}
+
+.logo-img{
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    justify-content: center;
+}
+
+.logo-devPro{
+    width: inherit;
+    margin-left: 10px;
+}
+
+.mision-vision{
+    display: flex;
+    justify-content: center;
+}
