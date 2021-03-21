@@ -17,9 +17,9 @@ function Navbar() {
           className="navbar navbar-expand-lg navbar-dark bg-black "
         >
           <div className="container">
-            <a id="logo-header" className="navbar-brand" href="#">
+            <Link id="logo-header" className="navbar-brand" to="/">
               <img className="logo"  src={Logo} alt="Logo" />
-            </a>
+            </Link>
             <button
               className="navbar-toggler"
               type="button"
