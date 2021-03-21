@@ -1,16 +1,20 @@
+.fondo{
+   margin: 0;
+   padding: 0;    
+   background-image: linear-gradient(#3cff8d, #336177); 
+}
+
 .contacto{
-    margin-top: 4%;
-    margin-bottom: 4%;
     display: flex; 
     flex-direction: column; 
-    align-items: center;
-
+    align-items: center; 
 }
 
 .title{
     display: flex;
     flex-direction: column; 
     align-items: center;
+    color: white;
 }
 
 .form-title{
@@ -20,9 +24,10 @@
 
 .formulario{
     border-radius: 30px;
-    border: 1px solid rgba(0, 0, 0, 0.125);
+    border: 2px solid rgb(248, 248, 248);
     display: flex;
-    flex-direction: column;   
+    flex-direction: column;  
+    color: white;
 }
 
 .send{

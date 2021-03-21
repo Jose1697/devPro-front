@@ -8,6 +8,10 @@ class Contacto extends React.Component {
         return (
             <>
                 <Navbar/>
+                <div className="fondo">
+                    <br/>
+                    <br/>
+                    <br/>
                 <div className="container contacto">
                     <div className="title">
                         <h3>Centro de Empredimiento e Innovación de DevPro</h3>
@@ -50,6 +54,12 @@ class Contacto extends React.Component {
 
                     
                 </div>
+                <br/>
+                <br/>
+                <br/>
+                </div>
+                
+                
                 <Footer/>
             </>
         )
