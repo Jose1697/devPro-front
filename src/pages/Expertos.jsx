@@ -97,7 +97,9 @@ class Expertos extends React.Component{
             </div>
          
         <div className="expert_container">
-        <ExpertoList lista={this.state.data}/>
+           <div >
+           <ExpertoList lista={this.state.data}/>
+           </div>
         </div>
         
         </div>
