@@ -84,10 +84,10 @@ class Expertos extends React.Component{
         <div>   
         <Navbar />      
         <div >
-            <img    className="Expertos__container"    
+            <img className="Expertos__container"    
                 src="https://www.unir.net/wp-content/uploads/2017/12/International_Mentoring_Program-1.jpg"             
               />
-            </div>
+        </div>
             <div class="texto-encima">
                 Red de Mentores
             </div>
