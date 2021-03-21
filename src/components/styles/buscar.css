@@ -1,12 +1,18 @@
 .container-buscador {
    
     margin-top: -140px;
-	margin-left: 1000px;
+	background:blue;
+	
+	width: 100%;
+
 	
     
 }
 .container-buscador1{
      width: 330px;
+	 float:right ;
+	 
+	 
 }
 .container-buscador:before,
 

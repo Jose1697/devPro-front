@@ -29,10 +29,20 @@ class ListProyectos extends React.Component{
        return(
         <>
         <div>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        
+        <br/>
+        <br/>
         <h1 className="titulo">Lista de Proyectos</h1> 
         <h1 className="titulo2"></h1>  
         </div>
