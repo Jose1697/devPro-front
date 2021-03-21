@@ -8,6 +8,7 @@ import Proyecto from '../pages/Proyecto'
 import Register from '../pages/Register'
 import Emprendedor from '../pages/Emprendedor'
 import Layout from '../components/Layout'
+import Contacto from '../pages/Constacto'
 
 const App = () => (
     <BrowserRouter>
@@ -20,6 +21,7 @@ const App = () => (
             <Route exact path="/Proyectos" component={Proyecto}/>
             <Route exact path="/Nosotros" component={Nosotros}/>
             <Route exact path="/Emprendedor" component={Emprendedor}/>
+            <Route exact path="/Contacto" component={Contacto}/>
         </Switch>
         
             
