@@ -7,7 +7,7 @@ import '../components/styles/nosotros.css'
 class Nosotros extends React.Component {
     render() {
         return (
-            <div>
+            <>
                 <Navbar />
                 <div className="container nosotros">
                     <div className="row">
@@ -69,10 +69,8 @@ class Nosotros extends React.Component {
                         </div>
                     </div> 
                 </div>
-
-
                 <Footer/>
-            </div>
+            </>
         );
     }
 }

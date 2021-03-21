@@ -53,8 +53,8 @@ function Navbar() {
                     Emprendedores
                   </Link>
                 </li>
-                <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" id="navbardrop" data-toggle="dropdown">
+                <li className="nav-item dropdown">
+                  <a className="nav-link dropdown-toggle" id="navbardrop" data-toggle="dropdown">
                     Empresas y Entidades
                   </a>
                  
