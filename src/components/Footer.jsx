@@ -7,7 +7,7 @@ const Footer = () => {
     return(
         <>
         <section className="footer">
-            <div className="container">
+            <div className="container foot">
                 <div className="copyright">
                     <p className="m-0">© 2021 DevPro</p>
                 </div>

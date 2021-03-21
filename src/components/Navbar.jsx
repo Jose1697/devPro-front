@@ -17,9 +17,9 @@ function Navbar() {
           className="navbar navbar-expand-lg navbar-dark bg-black "
         >
           <div className="container">
-            <a id="logo-header" className="navbar-brand" href="#">
+            <Link id="logo-header" className="navbar-brand" to="/">
               <img className="logo"  src={Logo} alt="Logo" />
-            </a>
+            </Link>
             <button
               className="navbar-toggler"
               type="button"
@@ -53,17 +53,17 @@ function Navbar() {
                     Emprendedores
                   </Link>
                 </li>
-                <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" id="navbardrop" data-toggle="dropdown">
+                <li className="nav-item dropdown">
+                  <a className="nav-link dropdown-toggle" id="navbardrop" data-toggle="dropdown">
                     Empresas y Entidades
                   </a>
                  
-                  <div class="dropdown-menu">
-                    <a class="dropdown-item" href="#Formulacion">Formulacion de Proyectos</a>
-                    <a class="dropdown-item" href="#Talleres">Talleres y cursos de Innovacion</a>
-                    <a class="dropdown-item" href="#Talleres">Talleres y cursos de Innovacion</a>
-                    <a class="dropdown-item" href="#Talleres">Talleres y cursos de Innovacion</a>
-                    <a class="dropdown-item" href="#Talleres">Talleres y cursos de Innovacion</a>
+                  <div className="dropdown-menu">
+                    <a className="dropdown-item" href="#Formulacion">Formulacion de Proyectos</a>
+                    <a className="dropdown-item" href="#Talleres">Talleres y cursos de Innovacion</a>
+                    <a className="dropdown-item" href="#Talleres">Talleres y cursos de Innovacion</a>
+                    <a className="dropdown-item" href="#Talleres">Talleres y cursos de Innovacion</a>
+                    <a className="dropdown-item" href="#Talleres">Talleres y cursos de Innovacion</a>
                    
                   </div>
                 </li>
@@ -84,7 +84,7 @@ function Navbar() {
                   </Link>
                 </li>
                 <li className="sesion">
-                  <Link  class="btn btn-success" to="/login">Iniciar Sesion</Link>
+                  <Link  className="btn btn-success" to="/login">Iniciar Sesion</Link>
                 </li>
                
               </ul>
