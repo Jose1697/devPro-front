@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React  from 'react';
 import { Link } from 'react-router-dom';
 import './styles/Navbar.css';
 import Logo from './images/logo-devpro.gif';
@@ -37,10 +37,10 @@ function Navbar() {
             >
               <ul className="navbar-nav ml-auto">
                 <li className="nav-item">
-                  <a className="nav-link" href="/">
+                  <Link className="nav-link" to="/">
                   <FontAwesomeIcon icon={faHome} />
                     Home<span className="sr-only">(current)</span>
-                  </a>
+                  </Link>
                 </li>
                 <li className="nav-item">
                   
@@ -54,16 +54,16 @@ function Navbar() {
                   </Link>
                 </li>
                 <li className="nav-item dropdown">
-                  <a className="nav-link dropdown-toggle" id="navbardrop" data-toggle="dropdown">
+                  <Link className="nav-link dropdown-toggle" to="/" id="navbardrop" data-toggle="dropdown">
                     Empresas y Entidades
-                  </a>
+                  </Link>
                  
                   <div className="dropdown-menu">
-                    <a className="dropdown-item" href="#Formulacion">Formulacion de Proyectos</a>
-                    <a className="dropdown-item" href="#Talleres">Talleres y cursos de Innovacion</a>
-                    <a className="dropdown-item" href="#Talleres">Talleres y cursos de Innovacion</a>
-                    <a className="dropdown-item" href="#Talleres">Talleres y cursos de Innovacion</a>
-                    <a className="dropdown-item" href="#Talleres">Talleres y cursos de Innovacion</a>
+                    <Link className="dropdown-item" to="#Formulacion">Formulacion de Proyectos</Link>
+                    <Link className="dropdown-item" to="#Talleres">Talleres y cursos de Innovacion</Link>
+                    <Link className="dropdown-item" to="#Talleres">Talleres y cursos de Innovacion</Link>
+                    <Link className="dropdown-item" to="#Talleres">Talleres y cursos de Innovacion</Link>
+                    <Link className="dropdown-item" to="#Talleres">Talleres y cursos de Innovacion</Link>
                    
                   </div>
                 </li>

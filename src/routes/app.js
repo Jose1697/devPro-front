@@ -7,7 +7,6 @@ import Nosotros from '../pages/Nosotros'
 import Proyecto from '../pages/Proyecto'
 import Register from '../pages/Register'
 import Emprendedor from '../pages/Emprendedor'
-import Layout from '../components/Layout'
 import Contacto from '../pages/Constacto'
 
 const App = () => (

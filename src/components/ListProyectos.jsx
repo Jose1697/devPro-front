@@ -8,7 +8,7 @@ class ListItaProyecto extends React.Component {
           <img
             className="BadgesListItem__avatar"
             src={this.props.badge.avatarUrl}
-           
+            alt=""
           />
   
           <div>
@@ -44,7 +44,7 @@ class ListProyectos extends React.Component{
         <br/>
         <br/>
         <h1 className="titulo">Lista de Proyectos</h1> 
-        <h1 className="titulo2"></h1>  
+        {/* <h1 className="titulo2"></h1>   */}
         </div>
         <section className="carrusel" >
          <div className="carrusel__container">

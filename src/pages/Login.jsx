@@ -50,7 +50,7 @@ const Login = (props) => {
                     <label>
                         <input type="checkbox" name="" id="cbox1" value="checkbox"/>Recuérdame
                     </label>
-                    <a href="">Olvidé mi contraseña</a>
+                    <Link to="">Olvidé mi contraseña</Link>
                 </div>
             </form>
             

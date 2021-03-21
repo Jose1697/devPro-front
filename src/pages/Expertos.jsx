@@ -85,7 +85,8 @@ class Expertos extends React.Component{
         <Navbar />      
         <div >
             <img className="Expertos__container"    
-                src="https://www.unir.net/wp-content/uploads/2017/12/International_Mentoring_Program-1.jpg"             
+                src="https://www.unir.net/wp-content/uploads/2017/12/International_Mentoring_Program-1.jpg"
+                alt=""             
               />
         </div>
             <div class="texto-encima">
@@ -93,7 +94,7 @@ class Expertos extends React.Component{
             </div>
             <div >
                 <h1 className="titulo">Lista de expertos</h1>
-                <h1 className="titulo2"></h1>
+                {/* <h1 className="titulo2"></h1> */}
             </div>
          
         <div className="expert_container">
