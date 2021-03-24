@@ -1,7 +1,7 @@
 import React from 'react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
-import Logo from '../components/images/logo-devpro.gif';
+import Logo from '../components/images/logo-blanco.gif';
 import '../components/styles/nosotros.css'
 
 class Nosotros extends React.Component {
@@ -23,12 +23,11 @@ class Nosotros extends React.Component {
                                             <h5 className="card-title">¿Qué es DevPro?</h5>
 
                                             <p className="card-text">
-                                            aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaassssssssssssssssssssssssss
-                                            aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaassssssssssssssssssssssssss
-                                            aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaassssssssssssssssssssssssss
-                                            aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaassssssssssssssssssssssssss
-                                            aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaassssssssssssssssssssssssss
-                                            aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaassssssssssssssssssssssssss.
+                                            Es una organización diseñada para acelerar el crecimiento y asegurar el éxito 
+                                            de proyectos emprendedores a través de una amplia gama de recursos y servicios 
+                                            empresariales que puede incluir renta de espacios físicos, capitalización, 
+                                            coaching, networking (es decir acceso a una red de contactos) y otros servicios 
+                                            básicos como telecomunicaciones, limpieza o estacionamiento..
                                             </p>
                                         </div>
                                     </div>
