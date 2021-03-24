@@ -27,7 +27,7 @@ class Nosotros extends React.Component {
                                             de proyectos emprendedores a través de una amplia gama de recursos y servicios 
                                             empresariales que puede incluir renta de espacios físicos, capitalización, 
                                             coaching, networking (es decir acceso a una red de contactos) y otros servicios 
-                                            básicos como telecomunicaciones, limpieza o estacionamiento..
+                                            básicos como telecomunicaciones, limpieza o estacionamiento.
                                             </p>
                                         </div>
                                     </div>

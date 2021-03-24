@@ -29,11 +29,10 @@ const Home = () => {
                                 <div class="col-md-6 offset-md-6 text-center text-md-right">
                                     <h1>DevPro</h1>
                                     <p class="d-none d-md-block">
-                                    Insertar un spitch Insertar un spitch Insertar un spitch
-                                    Insertar un spitch Insertar un spitch Insertar un spitch
-                                    Insertar un spitch Insertar un spitch Insertar un spitch
-                                    Insertar un spitch Insertar un spitch Insertar un spitch
-                                    Insertar un spitch Insertar un spitch Insertar un spitch
+                                    Somos una incubadora multisectorial 
+                                    (emprendimientos digitales y tradicionales) 
+                                    que busca que los emprendimientos sean innovadores, 
+                                    dinámicos, escalables y socialmente responsables.
                                     </p>
                                     <Link class="btn btn-primary mr-3">Ver Servicios</Link>
                                     <Link class="btn btn-success">Tengo un Proyecto</Link>
