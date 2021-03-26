@@ -24,9 +24,9 @@
       }
 .carrusel {
     overflow-x: scroll; overflow-y:hidden;
-    padding-left: 30px;
+   
     width: 100%;
-    max-width:1400px ;
+    
     position: relative;
 }
 .carrusel__container {
