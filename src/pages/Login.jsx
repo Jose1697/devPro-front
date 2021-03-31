@@ -26,6 +26,7 @@ class Login extends React.Component{
         .then( data => {
             if(data.Usuario){
                 alert(`${data.Usuario.first_name} se ha logueado correctamente`)
+                localStorage.setItem('usuario', JSON.stringify(data.Usuario))
                 this.props.history.push('/')
             }else{
                 alert('El email o contraseña son incorrectos')

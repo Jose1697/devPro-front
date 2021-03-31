@@ -11,31 +11,31 @@ const Home = () => {
         <>
         <Navbar />
         <main id="main">
-            <div id="carousel" class="carousel slide carousel-fade" data-ride="carousel">
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <img src="https://ticec.cedia.org.ec/images/noticias/2020/Incubadora%20de%20proyectos.jpg" class="d-block w-100" alt="Hawaii"/>
+            <div id="carousel" className="carousel slide carousel-fade" data-ride="carousel">
+                <div className="carousel-inner">
+                    <div className="carousel-item active">
+                        <img src="https://ticec.cedia.org.ec/images/noticias/2020/Incubadora%20de%20proyectos.jpg" className="d-block w-100" alt="Hawaii"/>
                     </div>
-                    <div class="carousel-item">
-                        <img src="https://www.sistemaimpulsa.com/blog/wp-content/uploads/2019/09/2-50-696x439.jpg" class="d-block w-100" alt="Hawaii 2"/>
+                    <div className="carousel-item">
+                        <img src="https://www.sistemaimpulsa.com/blog/wp-content/uploads/2019/09/2-50-696x439.jpg" className="d-block w-100" alt="Hawaii 2"/>
                     </div>
-                    <div class="carousel-item">
-                        <img src="http://www.masisalab.com/wp-content/uploads/2019/04/2.jpeg" class="d-block w-100" alt="Hawaii 3"/>
+                    <div className="carousel-item">
+                        <img src="http://www.masisalab.com/wp-content/uploads/2019/04/2.jpeg" className="d-block w-100" alt="Hawaii 3"/>
                     </div>
 
-                    <div class="overlay">
-                        <div class="container">
-                            <div class="row align-items-center">
-                                <div class="col-md-6 offset-md-6 text-center text-md-right">
+                    <div className="overlay">
+                        <div className="container">
+                            <div className="row align-items-center">
+                                <div className="col-md-6 offset-md-6 text-center text-md-right">
                                     <h1>DevPro</h1>
-                                    <p class="d-none d-md-block">
+                                    <p className="d-none d-md-block">
                                     Somos una incubadora multisectorial 
                                     (emprendimientos digitales y tradicionales) 
                                     que busca que los emprendimientos sean innovadores, 
                                     dinámicos, escalables y socialmente responsables.
                                     </p>
-                                    <Link class="btn btn-primary mr-3">Ver Servicios</Link>
-                                    <Link class="btn btn-success">Tengo un Proyecto</Link>
+                                    <Link className="btn btn-primary mr-3" to="">Ver Servicios</Link>
+                                    <Link className="btn btn-success" to="">Tengo un Proyecto</Link>
                                 </div>
                             </div>
                         </div>
