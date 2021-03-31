@@ -25,7 +25,7 @@ class Register extends React.Component{
           body: JSON.stringify(this.state.form)
         })
         console.log(this.state.form);
-        // props.history.push('/')
+        props.history.push('/login')
     }
 
     handleClick = (e) =>{
