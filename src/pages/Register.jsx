@@ -6,23 +6,24 @@ import '../components/styles/Register.css';
 class Register extends React.Component{
 
     state = {
-        form:{first_name:'', last_name:'cliente' ,email:'',password:''}
+        form:{first_name:'', last_name:'cliente' ,email:'',password:'', tipo:''}
     }
 
     
 
-    handleInput= event => {
+    handleInput = event => {
         const formulario = this.state.form;
         formulario[event.target.name] = event.target.value;
         this.setState({form: formulario});
     }
 
+
     handleSubmit = event => {
         event.preventDefault()
         fetch('https://devpro-2021.herokuapp.com/usuario/usuario/register/', {
-          method: 'POST',
-          headers: {'Content-Type': 'application/json'},
-          body: JSON.stringify(this.state.form)
+            method: 'POST',
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify(this.state.form)
         })
         console.log(this.state.form);
         this.props.history.push('/login')
@@ -38,8 +39,29 @@ class Register extends React.Component{
                 <div className="register__container">
                     
                     <h2>Regístrate</h2>
-                    
+                    <hr/>
                     <form className="register__container--form" onSubmit={this.handleSubmit}>
+                        <div className="form-check">          
+                            <label className="form-check-label" >
+                                <input className="form-check-input" value="Cliente" name="tipo" type="radio"  onChange={this.handleInput}/>
+                                Cliente
+                            </label>
+                        </div>
+
+                        <div className="form-check">
+                            <label className="form-check-label" >
+                                <input className="form-check-input" value="Experto" name="tipo" type="radio" onChange={this.handleInput}/>
+                                Experto
+                            </label>
+                        </div>
+                        <div className="form-check">           
+                            <label className="form-check-label" >
+                                <input className="form-check-input" value="Empresa" name="tipo" type="radio" onChange={this.handleInput}  />
+                                Empresa
+                            </label>
+                        </div>
+                        
+                           
                         <input
                             name="first_name"
                             className="input"  
