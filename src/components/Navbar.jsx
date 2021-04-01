@@ -19,7 +19,7 @@ class Navbar extends React.Component {
   render(){
       return (
         <>
-          <section className="header sticky-top">
+          <section className="header sticky-top mb-4">
             <nav
               id="header"
               className="navbar navbar-expand-lg navbar-dark bg-black "
