@@ -4,7 +4,7 @@ import './styles/Navbar.scss';
 import Logo from './images/logo-devpro.gif';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHome } from "@fortawesome/free-solid-svg-icons";
-import logoUser  from './images/user-icon.png';
+
 
 class Navbar extends React.Component {
 
@@ -96,19 +96,14 @@ class Navbar extends React.Component {
                       <div className="header__menu">
                           <div className="header__menu--profile">
                               
-                              <p>{this.usuario.first_name}</p>
-                              
-                              {this.usuario.last_name === '' ?
-                                <img src={logoUser} alt="User"/> :
+                              <p>{this.usuario.first_name}</p>                  
 
-                                <img className="fotoperfil" src={logoUser} alt="User"/>
-
-                              }
-                    
+                              <img className="fotoperfil" src={this.usuario.photo} alt="User"/>
+     
                           </div>
                     
                           <ul className="opciones">
-                              <li><Link  to="/" >Cuenta</Link></li>
+                              <li><Link  to="/profile" >Cuenta</Link></li>
                               <li><Link onClick={this.handleClick}  to="/login">Cerrar Sesión</Link></li>
                           </ul>
                       </div> :

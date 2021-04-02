@@ -6,7 +6,7 @@ import '../components/styles/Register.css';
 class Register extends React.Component{
 
     state = {
-        form:{first_name:'', last_name:'cliente' ,email:'',password:'', tipo:''}
+        form:{first_name:'', last_name:'' ,email:'',password:'', tipo_usuario:'',photo:'https://i.ibb.co/9T8WF8B/user-icon.png'}
     }
 
     
@@ -20,6 +20,11 @@ class Register extends React.Component{
 
     handleSubmit = event => {
         event.preventDefault()
+        if(this.state.form.tipo_usuario === 'Empresa'){
+            this.setState({form:{
+                tipo_usuario:'Empresa'
+            }})
+        }
         fetch('https://devpro-2021.herokuapp.com/usuario/usuario/register/', {
             method: 'POST',
             headers: {'Content-Type': 'application/json'},
@@ -43,20 +48,20 @@ class Register extends React.Component{
                     <form className="register__container--form" onSubmit={this.handleSubmit}>
                         <div className="form-check">          
                             <label className="form-check-label" >
-                                <input className="form-check-input" value="Cliente" name="tipo" type="radio"  onChange={this.handleInput}/>
+                                <input className="form-check-input" value="Cliente" name="tipo_usuario" type="radio"  onChange={this.handleInput}/>
                                 Cliente
                             </label>
                         </div>
 
                         <div className="form-check">
                             <label className="form-check-label" >
-                                <input className="form-check-input" value="Experto" name="tipo" type="radio" onChange={this.handleInput}/>
+                                <input className="form-check-input" value="Experto" name="tipo_usuario" type="radio" onChange={this.handleInput}/>
                                 Experto
                             </label>
                         </div>
                         <div className="form-check">           
                             <label className="form-check-label" >
-                                <input className="form-check-input" value="Empresa" name="tipo" type="radio" onChange={this.handleInput}  />
+                                <input className="form-check-input" value="Empresa" name="tipo_usuario" type="radio" onChange={this.handleInput}  />
                                 Empresa
                             </label>
                         </div>
@@ -69,6 +74,18 @@ class Register extends React.Component{
                             placeholder="Nombre"
                             onChange={this.handleInput}
                         />
+                        {
+                            this.state.form.tipo_usuario !== 'Empresa'? 
+                            <input
+                            name="last_name"
+                            className="input"  
+                            type="text" 
+                            placeholder="Apellido"
+                            onChange={this.handleInput}
+                            /> :
+                            []
+                        }
+                        
                         <input
                             name="email" 
                             className="input"  
