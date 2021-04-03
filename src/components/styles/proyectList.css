@@ -17,11 +17,7 @@
     text-align:center;
         
       }
- .titulo2{
-    width:100px;
-    margin: 40px auto;
-    border-top: 4px solid #ebb129;
-      }
+ 
 .carrusel {
     overflow-x: scroll; overflow-y:hidden;
    
