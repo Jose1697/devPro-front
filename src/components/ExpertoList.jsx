@@ -5,6 +5,7 @@ class ListItaDocente extends React.Component {
     render() {
       return (
         <div className="BadgesListItem">
+
           <img
             className="marco_imagen"
             src={this.props.badge.avatarUrl}
@@ -29,7 +30,7 @@ class ExpertoList extends React.Component{
        return(
      
         <div >
-       
+          <br/>
           {this.props.lista.map(badge => {
             return (
               <div id="caja1" key={badge.id}>

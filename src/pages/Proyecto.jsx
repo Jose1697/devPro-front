@@ -82,15 +82,15 @@ class Proyecto extends React.Component{
    render(){
        return(
         <div className="Fondo1">
-        <Navbar />
-        <div >
-                <div className="container-buscador">
-                  < Buscador/>
-                </div>
-        <div>
-         <ListProyectos lista={this.state.data}/>
-        </div>
-        </div>
+           <Navbar />
+              <div >
+                    <div className="container-buscador">
+                      < Buscador/>
+                    </div>
+                    <div>
+                      <ListProyectos lista={this.state.data}/>
+                    </div>
+              </div>
         </div>
        )
    }
