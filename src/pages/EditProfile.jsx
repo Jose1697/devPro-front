@@ -1,7 +1,8 @@
 import React from 'react'
 import Footer from '../components/Footer';
 import Navbar from '../components/Navbar';
-import { storage } from '../firebase'
+import { storage } from '../firebase';
+import Experto from '../components/FormExperto';
 // import { actualizarLocalStorage } from '../services/services'
 
 class EditProfile extends React.Component {
@@ -98,6 +99,13 @@ class EditProfile extends React.Component {
                         <button onClick={this.handleSubmit} className="btn btn-primary" >Guardar</button>
                     </div>
                     
+                    
+                    <div>
+                            {this.usuario.tipo_usuario === 'Experto'
+                                    ? <Experto  />
+                                    : []
+                            }
+                    </div>
                 <Footer/>
             </>
         )
