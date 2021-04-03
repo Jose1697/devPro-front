@@ -7,16 +7,29 @@ import { faHome } from "@fortawesome/free-solid-svg-icons";
 
 
 class Navbar extends React.Component {
+  
 
   constructor(props){
     super(props)
-    this.usuario = JSON.parse(localStorage.getItem('usuario'))
+    
+    this.state= {
+      usuario: JSON.parse(localStorage.getItem('usuario'))
+    }
+  }
+
+  componentDidMount(){
+    console.log('3. componentDidMount');
+    this.setState({
+      usuario: JSON.parse(localStorage.getItem('usuario'))
+    })
   }
 
   handleClick = event => {
     localStorage.removeItem("usuario")
   }
   render(){
+    
+    
       return (
         <>
           <section className="header sticky-top">
@@ -92,13 +105,13 @@ class Navbar extends React.Component {
                       </Link>
                     </li>
                     {/*  */}
-                    {this.usuario != null ? 
+                    {this.state.usuario != null ? 
                       <div className="header__menu">
                           <div className="header__menu--profile">
                               
-                              <p>{this.usuario.first_name}</p>                  
+                              <p>{this.state.usuario.first_name}</p>                  
 
-                              <img className="fotoperfil" src={this.usuario.photo} alt="User"/>
+                              <img className="fotoperfil" src={this.state.usuario.photo} alt="User"/>
      
                           </div>
                     
