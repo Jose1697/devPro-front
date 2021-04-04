@@ -3,6 +3,8 @@ import Footer from '../components/Footer';
 import Navbar from '../components/Navbar';
 import { storage } from '../firebase';
 import Experto from '../components/FormExperto';
+import api from '../api';
+import swal from 'sweetalert';
 // import { actualizarLocalStorage } from '../services/services'
 
 class EditProfile extends React.Component {
@@ -10,11 +12,17 @@ class EditProfile extends React.Component {
     constructor(props){
         super(props)
         this.state={
-            photo:''   
+            photo:'' ,
+            Experto: {
+                usuario:'',
+                id_tipo:'',
+                codigo_experto:'',
+                descripcion_experto:'',
+              },  
         }
         this.usuario = JSON.parse(localStorage.getItem('usuario'))
     }
-    
+  
 
     handleSave = (e) => {
 
@@ -79,6 +87,49 @@ class EditProfile extends React.Component {
     };
     
 
+    handleChange = e => {
+        this.setState({
+
+            Experto: {
+                ...this.state.Experto,
+                [e.target.name]: e.target.value,
+              },  
+          
+        });
+      };
+    
+      handleSubmit1 = async e => {
+        e.preventDefault();
+     
+        try {
+            this.state.Experto.usuario=this.usuario.id;
+            //por mientras
+            this.state.Experto.id_tipo= 1;
+            
+            console.log(this.state.Experto);
+            await api.badges.create(this.state.Experto);
+            swal("Registro Exitoso!", "You clicked the button!", "success");
+         
+         
+          
+        } catch (error) {
+          this.setState({  error: error });
+        }
+      };
+
+      handleSubmit2 = async e => {
+        e.preventDefault();
+        
+        try {
+            
+         
+         
+          
+        } catch (error) {
+          this.setState({  error: error });
+        }
+      };
+
 
     render(){
         return(
@@ -102,10 +153,18 @@ class EditProfile extends React.Component {
                     
                     <div>
                             {this.usuario.tipo_usuario === 'Experto'
-                                    ? <Experto  />
+                                    ? <Experto
+                                        onChange={this.handleChange}
+                                        onClick={this.handleSubmit1}
+                                        onClick1={this.handleSubmit2}
+                                        formValues={this.state.Experto}
+                                        formValues1={this.usuario}
+                                      />
                                     : []
                             }
                     </div>
+                
+                
                 <Footer/>
             </>
         )
