@@ -48,12 +48,20 @@ class EditProfile extends React.Component {
             body: JSON.stringify(this.state)
         })
         console.log(this.state);
-        this.actualizarLocalStorage()
-        console.log("storage actualizado");
-        console.log(JSON.parse(localStorage.getItem('usuario')));
-        console.log("verifico storage");
+        // this.actualizarLocalStorage()
+        // console.log("storage actualizado");
+        // console.log(JSON.parse(localStorage.getItem('usuario')));
+        // console.log("verifico storage");
         
-        console.log("ya cambie de pagina");
+        // console.log("ya cambie de pagina");
+        fetch(`https://devpro-2021.herokuapp.com/usuario/usuario/${this.usuario.id}/`)
+            .then((response)=>{
+                return response.json()
+            })
+            .then((user)=>{
+                localStorage.setItem('usuario', JSON.stringify(user))
+                this.props.history.push('/')
+            })
     }
 
     // actualizarLocalStorage = () => {
@@ -71,8 +79,8 @@ class EditProfile extends React.Component {
         const data = await  response.json()   
         console.log(data);
         console.log("verifico la data que ira al storage");
-        localStorage.setItem('usuario', JSON.stringify(data))
-        this.props.history.push('/')
+        
+        
         
         
     };
