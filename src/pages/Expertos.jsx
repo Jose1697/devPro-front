@@ -83,17 +83,24 @@ class Expertos extends React.Component{
        return(
         <div className="container__expert">   
         <Navbar />      
-        <div >
+        <div className="container__expert1">
             <img className="Expertos__container"    
                 src="https://www.unir.net/wp-content/uploads/2017/12/International_Mentoring_Program-1.jpg"
                 alt=""             
               />
-        </div>
-            <div class="texto-encima">
+              <div class="texto-encima">
                 Red de Mentores
             </div>
+        </div>
+        
+            
             <div >
-                <h1 className="titulo">Lista de expertos</h1>
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+                <h1 className="tituloPrin">Lista de Expertos</h1>
                  <h1 className="titulo2"></h1> 
             </div>
          

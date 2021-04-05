@@ -1,15 +1,14 @@
 import React from 'react';
 import Navbar from '../components/Navbar'
-
+import './styles/expert.css';
 class Emprendedor extends React.Component{
    render(){
        return(
-        <div>
+         <div>
             
-        <Navbar />
-        <div>
-            prueba1
-        </div>
+                <Navbar />
+                prueba1
+						
          </div>
        )
    }
