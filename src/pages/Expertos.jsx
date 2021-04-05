@@ -101,7 +101,7 @@ class Expertos extends React.Component{
                 <br/>
                 <br/>
                 <h1 className="tituloPrin">Lista de Expertos</h1>
-                 <h1 className="titulo2"></h1> 
+                 {/* <h1 className="titulo2"></h1>  */}
             </div>
          
         <div className="expert_container">
