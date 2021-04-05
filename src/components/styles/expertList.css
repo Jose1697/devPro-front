@@ -1,5 +1,5 @@
 #caja1,#caja2,#caja3,#caja4{
-    background-color: blue;
+  
     width: 300px;
     height: 300px;
     margin: 20px;
@@ -7,12 +7,21 @@
    
     float: left;
     }
+.BadgesListItem{
+    
+
+    width: 300px;
+    height: 300px;
+}
+.datos{
+    text-align: center;
+}
 .BadgesListItem__avatar {
-    border-radius: 50%;
-    background: #a3a3a3;
-     margin-right: 0.5rem;
-     width: 80px;
-    height: 80px;
+  
+ 
+    margin-left:20px;
+    width: 250px;
+    height: 240px;
       }
 .form_expert{
         display: flex; 

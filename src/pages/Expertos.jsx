@@ -1,9 +1,9 @@
 import React from 'react';
 import Navbar from '../components/Navbar'
 import './styles/expert.css';
-
+import api from '../api';
 import ExpertoList from '../components/ExpertoList';
-
+import PageLoader from '../components/loading';
 class Expertos extends React.Component{
     state = {
         data: [
@@ -78,8 +78,33 @@ class Expertos extends React.Component{
               'https://www.gravatar.com/avatar/e74e87d40e55b9ff9791c78892e55cb7?d=identicon',
           },
         ],
+        loading: true,
+        error: null,
+        data1:undefined,
       };
+
+  componentDidMount(){
+        this.fetchData()
+       }
+       fetchData=async () => {
+          this.setState({loading:true,error:null})
+     
+          try{
+           const data1=await api.badges.list();
+           console.log(data1);
+           console.log(data1.usuario);
+           
+           this.setState({loading:false,data1:data1})
+          }catch(error){
+           this.setState({loading:false,error:error})
+          }
+       }
+
    render(){
+        if (this.state.loading === true) {
+          return <PageLoader  />;
+        }
+
        return(
         <div className="container__expert">   
         <Navbar />      
@@ -106,7 +131,7 @@ class Expertos extends React.Component{
          
         <div className="expert_container">
            <div >
-           <ExpertoList lista={this.state.data}/>
+           <ExpertoList lista={this.state.data1}/>
            </div>
         </div>
         

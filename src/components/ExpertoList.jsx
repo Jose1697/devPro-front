@@ -7,18 +7,17 @@ class ListItaDocente extends React.Component {
         <div className="BadgesListItem">
 
           <img
-            className="marco_imagen"
-            src={this.props.badge.avatarUrl}
-            alt={`${this.props.badge.firstName} ${this.props.badge.lastName}`}
+            className="BadgesListItem__avatar"
+            src={this.props.expert.usuario.photo}
+            
           />
   
-          <div>
+          <div className="datos">
             <strong>
-              {this.props.badge.firstName} {this.props.badge.lastName}
+              {this.props.expert.usuario.first_name} {this.props.expert.usuario.last_name}
             </strong>
-            <br />@{this.props.badge.twitter}
-            <br />
-            {this.props.badge.jobTitle}
+            <br />{this.props.expert.usuario.email}
+            
           </div>
         </div>
       );
@@ -31,10 +30,10 @@ class ExpertoList extends React.Component{
      
         <div >
           <br/>
-          {this.props.lista.map(badge => {
+          {this.props.lista.map(experto => {
             return (
-              <div id="caja1" key={badge.id}>
-                <ListItaDocente badge={badge} />
+              <div id="caja1" key={experto.usuario}>
+                {<ListItaDocente expert={experto} />}
               </div>
             );
           })}
