@@ -1,6 +1,7 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 import '../components/styles/Register.css';
+import swal from 'sweetalert';
 
 
 class Register extends React.Component{
@@ -37,6 +38,7 @@ class Register extends React.Component{
         
         
         console.log(this.state.form);
+        await swal("Usuario Creado!", "You clicked the button!", "success");
         this.props.history.push('/login')
     }
 

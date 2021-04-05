@@ -1,6 +1,7 @@
 import React from 'react';
 import '../components/styles/Login.css'
 import {Link} from 'react-router-dom';
+import swal from 'sweetalert';
 
 
 class Login extends React.Component{
@@ -25,11 +26,13 @@ class Login extends React.Component{
         .then( data => data.json())
         .then( data => {
             if(data.Usuario){
-                alert(`${data.Usuario.first_name} se ha logueado correctamente`)
+                // swal(`${data.Usuario.first_name} se ha logueado correctamente`, "You clicked the button!", "success");
+                // alert(`${data.Usuario.first_name} se ha logueado correctamente`)
                 localStorage.setItem('usuario', JSON.stringify(data.Usuario))
                 this.props.history.push('/')
             }else{
-                alert('El email o contraseña son incorrectos')
+                swal('El email o contraseña son incorrectos', "You clicked the button!", "error");
+                // alert('El email o contraseña son incorrectos')
             }
         })
         //console.log(this.state.form);
