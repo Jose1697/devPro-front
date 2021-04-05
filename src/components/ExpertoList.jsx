@@ -17,7 +17,7 @@ class ListItaDocente extends React.Component {
               {this.props.expert.usuario.first_name} {this.props.expert.usuario.last_name}
             </strong>
             <br />{this.props.expert.usuario.email}
-            
+            <br />{this.props.expert.descripcion_experto}
           </div>
         </div>
       );
