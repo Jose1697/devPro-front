@@ -6,7 +6,7 @@ class ListItaProyecto extends React.Component {
       return (
         <div >
           <img
-            className="BadgesListItem__avatar"
+            className="BadgesListItem__avatar1"
             src={this.props.badge.avatarUrl}
             alt=""
           />
