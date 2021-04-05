@@ -2,6 +2,7 @@ import React from 'react';
 import Navbar from '../components/Navbar'
 import './styles/expert.css';
 import api from '../api';
+import Footer from '../components/Footer';
 import ExpertoList from '../components/ExpertoList';
 import PageLoader from '../components/loading';
 class Expertos extends React.Component{
@@ -35,6 +36,7 @@ class Expertos extends React.Component{
         }
 
        return(
+         <>
         <div className="container__expert">   
         <Navbar />      
         <div className="container__expert1">
@@ -62,9 +64,12 @@ class Expertos extends React.Component{
            <div >
            <ExpertoList lista={this.state.data1}/>
            </div>
+           <Footer/>
         </div>
-        
+       
         </div>
+         
+        </>
        )
    }
 }
