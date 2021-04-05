@@ -61,7 +61,7 @@ class EditProfile extends React.Component {
         const response = await fetch(`https://devpro-2021.herokuapp.com/usuario/usuario/${this.usuario.id}/`)
         const data = await  response.json() 
         await localStorage.setItem('usuario', JSON.stringify(data))
-        await this.props.history.push('/')
+        
    
     }
 
