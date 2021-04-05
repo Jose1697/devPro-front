@@ -49,44 +49,22 @@ class EditProfile extends React.Component {
 
     };
 
-    handleSubmit = () => {
+    handleSubmit = async () => {
         // event.preventDefault()
     
-        fetch(`https://devpro-2021.herokuapp.com/usuario/usuario/${this.usuario.id}/`, {
+        await fetch(`https://devpro-2021.herokuapp.com/usuario/usuario/${this.usuario.id}/`, {
             method: 'PATCH',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify(this.state)
         })
-        console.log(this.state);
-        this.actualizarLocalStorage()
-        console.log("storage actualizado");
-        console.log(JSON.parse(localStorage.getItem('usuario')));
-        console.log("verifico storage");
-        
-        console.log("ya cambie de pagina");
+
+        const response = await fetch(`https://devpro-2021.herokuapp.com/usuario/usuario/${this.usuario.id}/`)
+        const data = await  response.json() 
+        await localStorage.setItem('usuario', JSON.stringify(data))
+        await this.props.history.push('/')
+   
     }
 
-    // actualizarLocalStorage = () => {
-    //     let newUser;
-    //     this.obtenerUsuario().then((us) => { newUser = us} )
-    //     console.log(newUser);
-        
-    // };
-    
-    
-    
-    actualizarLocalStorage = async() => {
-        console.log("actualizando storage");
-        const response = await fetch(`https://devpro-2021.herokuapp.com/usuario/usuario/${this.usuario.id}/`)
-        const data = await  response.json()   
-        console.log(data);
-        console.log("verifico la data que ira al storage");
-        localStorage.setItem('usuario', JSON.stringify(data))
-        this.props.history.push('/')
-        
-        
-    };
-    
 
     handleChange = e => {
         this.setState({
@@ -156,7 +134,7 @@ class EditProfile extends React.Component {
                         
                         
 
-                        <button onClick={this.handleSubmit} className="btn btn-primary" >Guardar</button>
+                        <button onClick={() => {this.handleSubmit()}} className="btn btn-primary" >Guardar</button>
                     </div>
                     
                     

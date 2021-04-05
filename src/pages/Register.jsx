@@ -1,6 +1,7 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 import '../components/styles/Register.css';
+import swal from 'sweetalert';
 
 
 class Register extends React.Component{
@@ -18,19 +19,26 @@ class Register extends React.Component{
     }
 
 
-    handleSubmit = event => {
+    handleSubmit = async(event) => {
         event.preventDefault()
         if(this.state.form.tipo_usuario === 'Empresa'){
-            this.setState({form:{
-                tipo_usuario:'Empresa'
-            }})
+            await this.setState({
+                form:{...this.state.form,
+                    last_name:'Empresa'
+                }
+            }) 
         }
+        console.log(this.state.form.last_name);
+        
         fetch('https://devpro-2021.herokuapp.com/usuario/usuario/register/', {
             method: 'POST',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify(this.state.form)
         })
+        
+        
         console.log(this.state.form);
+        await swal("Usuario Creado!", "You clicked the button!", "success");
         this.props.history.push('/login')
     }
 
@@ -101,7 +109,7 @@ class Register extends React.Component{
                             onChange={this.handleInput}
                         />
 
-                        <button onClick={this.handleClick} className="button">Registrarme</button>
+                        <button onClick={()=>{this.handleClick()}} className="button">Registrarme</button>
                         
                     </form>
                     
