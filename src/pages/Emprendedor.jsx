@@ -1,5 +1,6 @@
 import React from 'react';
 import Navbar from '../components/Navbar'
+import EmprendedorList from '../components/EmprendedorList'
 import './styles/expert.css';
 class Emprendedor extends React.Component{
    render(){
@@ -7,7 +8,9 @@ class Emprendedor extends React.Component{
          <div>
             
                 <Navbar />
-                prueba1
+               <div>
+               <EmprendedorList />
+               </div>
 						
          </div>
        )
