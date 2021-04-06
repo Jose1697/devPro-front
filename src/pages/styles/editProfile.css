@@ -1,0 +1,20 @@
+.foto-cargada{
+    width: 30%;
+}
+
+.form-foto{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border:2px solid black;
+    border-radius: 20px;
+    width: 80%;
+    margin:auto
+    
+    
+}
+
+.title-foto{
+    text-align:center;
+}

@@ -1,37 +1,99 @@
 .Expertos__container {
+    
     width: 100%;
-    max-width: 1400px;
     height:100%;
+   
     max-height:500px;
     margin: 0 ;
     padding: 0 ;
+ 
    
    
+  }
+ 
+  .Expertos__container:hover {
+    
+    opacity: 1;
+    
+  }
+ 
+  .container__expert1:hover .texto-encima  {
+    
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -o-transform: scale(1);
+    -ms-transform: scale(1);
+    
+    transform: scale(1);
+    opacity: 1;
+    
+  }
+
+ 
+  .container__expert1{ 
+    width: 100%;
+    height: 80%;
+    
+  }
+  .container__expert{
+    width: 100%;
   }
   .texto-encima{
       position: absolute;
-       top: 300px;
+      background: rgba(63,147,147, 0.8);
+      width: 100%;
+      height:100%;
+      max-height:500px;
+      margin: 0 ;
+      padding: 0 ;
+      top: 128px;
+      color: #fff;
+      font-family: 'Open Sans', Arial, sans-serif;
+      text-align: center;
+      text-shadow: 
+      0 0 1px #fff, 
+      0 1px 2px rgba(0,0,0,0.3);
+     
+      font-size:5vw;
+      opacity: 0;
+  
+      -webkit-transition: all 0.4s ease-in-out;
+      -moz-transition: all 0.4s ease-in-out;
+      -o-transition: all 0.4s ease-in-out;
+      -ms-transition: all 0.4s ease-in-out;
+      transition: all 0.4s ease-in-out;
       
-      left: 10%;
-      color:darkcyan;
-      font-size: 140px;
+      -webkit-transform: scale(0);
+      -moz-transform: scale(0);
+      -o-transform: scale(0);
+      -ms-transform: scale(0);
+      transform: scale(0);
+      
+      
   }
-  .titulo{
-    font-size: 100px;
+  .tituloPrin{
+ 
     text-align:center;
+    width: 100%;
+    font-size:5vw;
     
   }
+  .titulo2{
+    width: 100px;
+   
+    margin:auto;
+    border-top: 4px solid #6d29eb;
+    
+      }
+
   .expert_container {
     width: 100%;
-    max-width: 3000px;
-    margin: 250px;
+    background-color: #fafafa;
+    position: absolute;
     margin-top: 0 ;
+   
   }
-  .titulo2{
-    width:100px;
-    margin: 40px auto;
-    border-top: 4px solid #ebb129;
-  }
+ 
   #columnas{
     column-count:2;
     column-gap:20px;
@@ -40,3 +102,9 @@
  #Centrado{
   margin-left: 250px;
  }
+
+
+
+
+
+

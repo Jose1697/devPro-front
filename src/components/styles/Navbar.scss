@@ -1,0 +1,86 @@
+#header{
+    background: black;
+  }
+  
+#logo-header{
+    display: flex;
+    align-items: center;
+    font-family: 'Fjalla One', sans-serif;
+}
+
+.logo{
+    height: 100px;
+}
+.navbar-brand{
+    margin-left: -120px;
+}
+.frase-logo{
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    margin-bottom: 0;
+}
+.navbar-nav {
+    margin-right: -100px;
+}
+
+.header__menu{
+    margin-right: 30px;
+    width: 90px;
+}
+
+.header__menu ul{
+    display: none;
+    list-style: none;
+    padding: 0px;
+    position: absolute;
+    width: 100px;
+    text-align: right;
+    margin:0px 0px 0px -14px;
+    background-color: black;
+}
+
+.header__menu:hover ul, .opciones:hover{
+    display: block;
+}
+
+.header__menu li{
+    margin: 10px 0px;
+}
+
+.header__menu li a{
+    color: white;
+    text-decoration: none;
+}
+
+.header__menu li a:hover{
+    text-decoration: underline;
+}
+
+.header__menu--profile{
+    display: flex;
+    width: 100%;
+    color: white;
+    align-items: center;
+    justify-content: center;
+    
+    p{
+        margin: 0px 10px;
+    }
+}
+
+.header__menu--profile img{
+    width: 40px;
+    height: 40px;
+    margin-right: 8px;
+}
+
+.opciones{
+    text-align: center;
+}
+
+.fotoperfil{
+    border-radius: 50%;
+    width: 150px;
+}
+

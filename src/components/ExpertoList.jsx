@@ -1,22 +1,23 @@
 import React from 'react';
 import './styles/expertList.css';
+
 class ListItaDocente extends React.Component {
     render() {
       return (
         <div className="BadgesListItem">
+
           <img
             className="BadgesListItem__avatar"
-            src={this.props.badge.avatarUrl}
-            alt={`${this.props.badge.firstName} ${this.props.badge.lastName}`}
+            src={this.props.expert.usuario.photo}
+            
           />
   
-          <div>
+          <div className="datos">
             <strong>
-              {this.props.badge.firstName} {this.props.badge.lastName}
+              {this.props.expert.usuario.first_name} {this.props.expert.usuario.last_name}
             </strong>
-            <br />@{this.props.badge.twitter}
-            <br />
-            {this.props.badge.jobTitle}
+            <br />{this.props.expert.usuario.email}
+            <br />{this.props.expert.descripcion_experto}
           </div>
         </div>
       );
@@ -28,11 +29,11 @@ class ExpertoList extends React.Component{
        return(
      
         <div >
-       
-          {this.props.lista.map(badge => {
+          <br/>
+          {this.props.lista.map(experto => {
             return (
-              <div id="caja1" key={badge.id}>
-                <ListItaDocente badge={badge} />
+              <div id="caja1" key={experto.usuario}>
+                {<ListItaDocente expert={experto} />}
               </div>
             );
           })}
