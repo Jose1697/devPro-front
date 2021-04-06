@@ -5,6 +5,7 @@ import { storage } from '../firebase';
 import Experto from '../components/FormExperto';
 import api from '../api';
 import swal from 'sweetalert';
+import './styles/editProfile.css'
 // import { actualizarLocalStorage } from '../services/services'
 
 class EditProfile extends React.Component {
@@ -61,7 +62,8 @@ class EditProfile extends React.Component {
         const response = await fetch(`https://devpro-2021.herokuapp.com/usuario/usuario/${this.usuario.id}/`)
         const data = await  response.json() 
         await localStorage.setItem('usuario', JSON.stringify(data))
-        
+        await this.props.history.push('/')
+        await this.props.history.push('/profile')
    
     }
 
@@ -123,18 +125,29 @@ class EditProfile extends React.Component {
             <>
                 <Navbar/>
 
-                    <div className="container">
-                        <div>
-                            <input type="file" onChange={this.handleSave}/>
-                        </div>
-                        
-                        <div>
-                            <img src={`${this.state.photo}` || "https://image.flaticon.com/icons/png/512/16/16410.png"} alt="new-img" />
-                        </div>
-                        
-                        
+                    <div className="container mt-3 mb-4">
+                        <h1 className="title-foto">Foto de perfil</h1>
+                        <div className="form-foto">
+                            
+                            <h3>¿Deseas cambiar tu foto de perfil?</h3>
+                            <div>
+                                <input type="file" onChange={this.handleSave}/>
+                            </div>
+                            
+                            
+                            <img className="foto-cargada" src={`${this.state.photo}` || "https://image.flaticon.com/icons/png/512/16/16410.png"} alt="new-img" />
+                            
 
-                        <button onClick={() => {this.handleSubmit()}} className="btn btn-primary" >Guardar</button>
+                            <button onClick={() => {this.handleSubmit()}} className="btn btn-primary mb-4" >Actualizar Foto</button>
+                        
+                        </div>
+
+                        
+                        
+                        
+                        
+                        
+                        
                     </div>
                     
                     
