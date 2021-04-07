@@ -30,7 +30,7 @@ class Register extends React.Component{
         }
         console.log(this.state.form.last_name);
         
-        fetch('https://devpro-2021.herokuapp.com/usuario/usuario/register/', {
+        await fetch('https://devpro-2021.herokuapp.com/usuario/usuario/register/', {
             method: 'POST',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify(this.state.form)
@@ -70,7 +70,7 @@ class Register extends React.Component{
                         <div className="form-check">           
                             <label className="form-check-label" >
                                 <input className="form-check-input" value="Empresa" name="tipo_usuario" type="radio" onChange={this.handleInput}  />
-                                Empresa
+                                Inversionista
                             </label>
                         </div>
                         
