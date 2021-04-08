@@ -10,6 +10,14 @@ class Register extends React.Component{
         form:{first_name:'', last_name:'' ,email:'',password:'', tipo_usuario:'',photo:'https://i.ibb.co/9T8WF8B/user-icon.png'}
     }
 
+    constructor(props){
+        super(props)
+        this.state = {
+            form:{first_name:'', last_name:'' ,email:'',password:'', tipo_usuario:'',photo:'https://i.ibb.co/9T8WF8B/user-icon.png'}
+        }
+        this.newUser=null
+    }
+
     
 
     handleInput = event => {
@@ -21,22 +29,54 @@ class Register extends React.Component{
 
     handleSubmit = async(event) => {
         event.preventDefault()
-        if(this.state.form.tipo_usuario === 'Empresa'){
-            await this.setState({
-                form:{...this.state.form,
-                    last_name:'Empresa'
-                }
-            }) 
-        }
+        // if(this.state.form.tipo_usuario === 'Inversionista'){
+        //     await this.setState({
+        //         form:{...this.state.form,
+        //             last_name:'Inversionista'
+        //         }
+        //     }) 
+        // }
         console.log(this.state.form.last_name);
         
         await fetch('https://devpro-2021.herokuapp.com/usuario/usuario/register/', {
             method: 'POST',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify(this.state.form)
-        })
-        
-        
+        }).then((data) => { return data.json()} )
+          .then((user) => this.newUser = user.id)
+
+        console.log(this.newUser);
+        const usuarioEspecifico  = {
+            id:this.newUser,
+            codigo_experto:this.newUser
+        }
+
+        if(this.state.form.tipo_usuario === 'Cliente'){
+            
+            await fetch('https://devpro-2021.herokuapp.com/usuario/usuario/register/', {
+            method: 'POST',
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify(usuarioEspecifico)
+            })
+
+        }else if(this.state.form.tipo_usuario === 'Experto'){
+           
+            await fetch('https://devpro-2021.herokuapp.com/core/experto/', {
+            method: 'POST',
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify(usuarioEspecifico)
+            })
+
+        }else if(this.state.form.tipo_usuario === 'Inversionista'){
+            
+            await fetch('https://devpro-2021.herokuapp.com/usuario/usuario/register/', {
+            method: 'POST',
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify(usuarioEspecifico)
+            })
+
+        }
+                
         console.log(this.state.form);
         await swal("Usuario Creado!", "You clicked the button!", "success");
         this.props.history.push('/login')
@@ -69,7 +109,7 @@ class Register extends React.Component{
                         </div>
                         <div className="form-check">           
                             <label className="form-check-label" >
-                                <input className="form-check-input" value="Empresa" name="tipo_usuario" type="radio" onChange={this.handleInput}  />
+                                <input className="form-check-input" value="Inversionista" name="tipo_usuario" type="radio" onChange={this.handleInput}  />
                                 Inversionista
                             </label>
                         </div>
@@ -82,17 +122,16 @@ class Register extends React.Component{
                             placeholder="Nombre"
                             onChange={this.handleInput}
                         />
-                        {
-                            this.state.form.tipo_usuario !== 'Empresa'? 
-                            <input
+                        
+                            
+                        <input
                             name="last_name"
                             className="input"  
                             type="text" 
                             placeholder="Apellido"
                             onChange={this.handleInput}
-                            /> :
-                            []
-                        }
+                        /> 
+                        
                         
                         <input
                             name="email" 
