@@ -46,34 +46,42 @@ class Register extends React.Component{
           .then((user) => this.newUser = user.id)
 
         console.log(this.newUser);
-        const usuarioEspecifico  = {
-            id:this.newUser,
-            codigo_experto:this.newUser
-        }
+
+          
 
         if(this.state.form.tipo_usuario === 'Cliente'){
+            const cliente = {
+                usuario:this.newUser,
+            }
             
-            await fetch('https://devpro-2021.herokuapp.com/usuario/usuario/register/', {
+            await fetch('https://devpro-2021.herokuapp.com/core/cliente/', {
             method: 'POST',
             headers: {'Content-Type': 'application/json'},
-            body: JSON.stringify(usuarioEspecifico)
+            body: JSON.stringify(cliente)
             })
 
         }else if(this.state.form.tipo_usuario === 'Experto'){
-           
+            const experto = {   
+                "id":this.newUser,
+                "usuario": this.newUser  
+            }
             await fetch('https://devpro-2021.herokuapp.com/core/experto/', {
             method: 'POST',
             headers: {'Content-Type': 'application/json'},
-            body: JSON.stringify(usuarioEspecifico)
+            body: JSON.stringify(experto)
             })
 
         }else if(this.state.form.tipo_usuario === 'Inversionista'){
-            
-            await fetch('https://devpro-2021.herokuapp.com/usuario/usuario/register/', {
+            const inversionista = {
+                "id": this.newUser,
+                "usuario": this.newUser
+            }
+            await fetch('https://devpro-2021.herokuapp.com/core/inversionista/', {
             method: 'POST',
             headers: {'Content-Type': 'application/json'},
-            body: JSON.stringify(usuarioEspecifico)
-            })
+            body: JSON.stringify(inversionista)
+            }).then((data) => { return data.json()})
+            .then((user) => console.log(user))
 
         }
                 
