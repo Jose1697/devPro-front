@@ -38,38 +38,11 @@ handleClick = e => {
                         value={this.props.formValues.descripcion_experto}
                         />
                     </div>
-                    <div className="form-group">
-                        <label>Usuario</label>
-                        <input
-                      
-                        className="form-control"
-                        name="id"
-                        readOnly
-                        type="number"
-                        value={this.props.formValues1.id}
-                        />
-                    </div>
-                     
-                    
-
-
-                    <div className="form-group">
-                        <label>Codigo Tipo</label>
-                        <input
-                        readOnly
-                        className="form-control"
-                        type="number"
-                        name="id_tipo"
-                        value="1"
-                        />
-                    </div>
+                 
                    <div>
-                        <button onClick={this.props.onClick}  className="btn btn-primary">
-                                Save
-                        </button>
-                        {" "}
+                        
                         <button onClick={this.props.onClick1}  className="btn btn-success">
-                               Editar
+                               Actualizar Información
                         </button>
                    </div>
                     

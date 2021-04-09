@@ -3,7 +3,7 @@ import Footer from '../components/Footer';
 import Navbar from '../components/Navbar';
 import { storage } from '../firebase';
 import Experto from '../components/FormExperto';
-import Cliente from '../components/EmprendedorList';
+import Cliente from '../components/FormCliente';
 import api from '../api';
 import swal from 'sweetalert';
 import './styles/editProfile.css'
