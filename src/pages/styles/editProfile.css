@@ -9,12 +9,15 @@
     align-items: center;
     border:2px solid black;
     border-radius: 20px;
-    width: 80%;
-    margin:auto
+    width: 100%;
+    margin:auto;
+    height: 100%;
     
     
 }
 
 .title-foto{
     text-align:center;
+    font-size: 3vw;
+    
 }

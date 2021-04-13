@@ -124,11 +124,17 @@ class EditProfile extends React.Component {
     render(){
         return(
             <>
-                <Navbar/>
-
-                    <div className="container mt-3 mb-4">
-                        <h1 className="title-foto">Foto de perfil</h1>
-                        <div className="form-foto">
+            <div>
+            <Navbar/>
+            </div>
+                
+                
+                    <div className="container" >
+                   
+                    <div className="row">
+                        <div className="col-6">
+                            <h1 className="title-foto">Foto de perfil</h1>
+                            <div className="form-foto">
                             
                             <h3>¿Deseas cambiar tu foto de perfil?</h3>
                             <div>
@@ -143,16 +149,8 @@ class EditProfile extends React.Component {
                         
                         </div>
 
-                        
-                        
-                        
-                        
-                        
-                        
-                    </div>
-                    
-                    
-                    <div>
+                        </div>
+                        <div className="col-6">
                             {this.usuario.tipo_usuario === 'Experto'
                                     ? <Experto
                                         onChange={this.handleChange}
@@ -171,9 +169,22 @@ class EditProfile extends React.Component {
                                     : []
                              }
                     </div>
+                        
+                        
+                        
+                    </div> 
+                    
+                    </div>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+                    
+                   
+                 <Footer/>
                 
-                
-                <Footer/>
+               
             </>
         )
 

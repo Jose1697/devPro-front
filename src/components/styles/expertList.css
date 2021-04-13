@@ -28,14 +28,34 @@
         display: flex; 
         flex-direction: column; 
         align-items: center; 
-    }
+       
+        height: 100%;
 
+      
+    }
+.dni{
+    font-size: 1.5vw;
+}
+.Descripcion{
+    font-size: 1.5vw;
+}
+.btn btn-success{
+    font-size: 1.5vw;
+   
+}
+.Titulo{
+    text-align: center;
+    font-size: 3vw;
+}
+.botonR{
+    font-size: 1.5vw;
+}
 .form_Ex{
         border-radius: 30px;
         border: 2px solid rgb(160, 43, 43);
         display: flex;
         flex-direction: column;  
-        
+        height: 100%;
         color: rgb(5, 4, 4);
 }
     

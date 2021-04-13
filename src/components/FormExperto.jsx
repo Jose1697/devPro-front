@@ -8,17 +8,19 @@ handleClick = e => {
     
    render(){
        return(
+           <>
+        <h1 className="Titulo">Informacion Personal</h1>
         <div className="form_expert">
-        <h1>Informacion Personal</h1>
+        
 
-            <form className="form mt-5" style={{width: '70%'}} >
+            <form className="form mt-10" style={{width: '95%'}}  >
                 <div className="card-body form_Ex">   
                    
 
 
                    
                     <div className="form-group">
-                        <label>Dni Experto</label>
+                        <label className="dni">Dni Experto</label>
                         <input
                         onChange={this.props.onChange}
                         className="form-control"
@@ -29,7 +31,7 @@ handleClick = e => {
                     </div>
                     
                     <div className="form-group">
-                        <label>Descripcion</label>
+                        <label className="Descripcion">Descripcion</label>
                         <input
                         onChange={this.props.onChange}
                         className="form-control"
@@ -41,16 +43,19 @@ handleClick = e => {
                  
                    <div>
                         
-                        <button onClick={this.props.onClick1}  className="btn btn-success">
-                               Actualizar Información
+                        <button onClick={this.props.onClick1}  className="btn btn-primary btn-xs">
+                             <div className="botonR">Actualizar 
+                               Información</div>  
                         </button>
                    </div>
                     
                 </div>   
             </form>
       </div>
+      </>
        )
    }
+
 }
 
 
