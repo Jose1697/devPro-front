@@ -35,7 +35,7 @@ class FormProyecto extends React.Component{
                 () => {
                     storage.ref('images').child(image.name).getDownloadURL().then(url => {
                         this.setState({photo:url});
-                        this.state.Proyecto.photo=url;
+                       
                        
                     })
                 }
@@ -59,7 +59,7 @@ class FormProyecto extends React.Component{
      
         try {
             this.state.Proyecto.id_cliente=this.usuario.id;
-            
+            this.state.Proyecto.photo=this.state.photo;
             
             console.log(this.state.Proyecto);
             await api.badges.create(this.state.Proyecto);
@@ -78,10 +78,11 @@ class FormProyecto extends React.Component{
              <div className="container" >
                    
                     <div className="row">
-                        <div className="col-4">
-                                    <h1 className="title-foto">Foto de proyecto</h1>
+                        <div className="col-6">
+                            <br/>
                                         <div className="form-foto">
-                                                                               
+                                       
+                                        <h1 className="title-foto">Foto de proyecto</h1>                                      
                                                 <div>
                                                     <input type="file" onChange={this.handleSave}/>
                                                 </div>                                                                                             
@@ -90,12 +91,12 @@ class FormProyecto extends React.Component{
                                         </div>
 
                         </div>
-                        <div className="col-8">            
-                            <h1 className="Titulo">Empieza un Proyecto</h1>
-                                <div className="form_expert">
-                            
+                        <div className="col-6">            
+                              <br/>
+                                <div className="form-register">
+                                    <h4>Empieza un Proyecto</h4>
                                     <form className="form mt-10" style={{width: '95%'}}  >
-                                        <div className="card-body form_Ex">   
+                                        <div className="card-body ">   
                                     
                         
                                             <div className="form-group">
