@@ -10,6 +10,7 @@ import Emprendedor from '../pages/Emprendedor'
 import Contacto from '../pages/Constacto'
 import EditProfile from '../pages/EditProfile'
 import NewProyecto from '../pages/NewProyecto'
+import FormProyecto from '../components/FormProyecto'
 
 const App = () => (
     <BrowserRouter>
@@ -25,6 +26,7 @@ const App = () => (
             <Route exact path="/Contacto" component={Contacto}/>
             <Route exact path="/Profile" component={EditProfile}/>
             <Route exact path="/NewProyecto" component={NewProyecto}/>
+            <Route exact path="/newPro" component={FormProyecto}/>
         </Switch>
         
             

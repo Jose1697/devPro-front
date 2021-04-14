@@ -7,10 +7,13 @@ class NewProyecto extends React.Component{
        return(
          <div>
             
-                <Navbar />
-               <div>
-               <FormProyecto />
-               </div>
+            <Navbar />
+                <div >
+                    Convierte ....en realidad
+                     <br/>
+                    <a class="btn btn-primary" href="/newPro" role="button">Empieza Un Proyecto</a>
+                </div>
+             
 						
          </div>
        )
