@@ -1,4 +1,4 @@
-const BASE_URL = 'https://devpro-2021.herokuapp.com';
+const BASE_URL = 'http://localhost:8000';
 
 
 
