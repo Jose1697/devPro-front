@@ -1,0 +1,19 @@
+.projectDetail{
+    display: flex;
+    justify-content: center;
+    height: calc(100vh - 210px);
+    align-items: center;
+}
+
+.imgContenedor{
+    display: flex;
+}
+
+.imgProject{
+    width: 100%;
+}
+
+.detailCard{
+    height: max-content;
+    width: 70%;
+}

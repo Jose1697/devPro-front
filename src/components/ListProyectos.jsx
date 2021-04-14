@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './styles/proyectList.css'
 
 class ListItaProyecto extends React.Component {
@@ -51,7 +52,11 @@ class ListProyectos extends React.Component{
           {this.props.lista.map(badge => {
             return (
               <div id="carousel-item" key={badge.id}>
-                <ListItaProyecto badge={badge} />
+                
+                <Link to="/Proyectos/8">  {/* Cambiar el 8 por el id del proyecto */}
+                  <ListItaProyecto badge={badge} />
+                </Link>
+                
               </div>
             );
           })}
