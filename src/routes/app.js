@@ -9,6 +9,7 @@ import Register from '../pages/Register'
 import Emprendedor from '../pages/Emprendedor'
 import Contacto from '../pages/Constacto'
 import EditProfile from '../pages/EditProfile'
+import NewProyecto from '../pages/NewProyecto'
 
 const App = () => (
     <BrowserRouter>
@@ -23,11 +24,12 @@ const App = () => (
             <Route exact path="/Emprendedor" component={Emprendedor}/>
             <Route exact path="/Contacto" component={Contacto}/>
             <Route exact path="/Profile" component={EditProfile}/>
+            <Route exact path="/NewProyecto" component={NewProyecto}/>
         </Switch>
         
             
         
-        
+       
         
         
     </BrowserRouter>

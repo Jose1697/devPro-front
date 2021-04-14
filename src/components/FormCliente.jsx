@@ -13,44 +13,19 @@ class FormCliente extends React.Component{
  
                     
                      <div className="form-group">
-                         <label>Dni Experto</label>
-                         <input
-                           className="form-control"
-                         
-                         />
-                     </div>
-                     
-                     <div className="form-group">
                          <label>Descripcion</label>
                          <input
                            className="form-control"
-                         />
-                     </div>
-                     <div className="form-group">
-                         <label>Usuario</label>
-                         <input
-                          className="form-control"
                          
                          />
                      </div>
-                      
                      
- 
- 
-                     <div className="form-group">
-                         <label>Codigo Tipo</label>
-                         <input
-                           className="form-control"
-                         />
-                     </div>
+                     
                     <div>
                          <button   className="btn btn-primary">
-                                 Save
+                                Agregar 
                          </button>
-                         {" "}
-                         <button   className="btn btn-success">
-                                Editar
-                         </button>
+                         
                     </div>
                      
                  </div>   
