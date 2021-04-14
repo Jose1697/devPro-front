@@ -161,13 +161,13 @@ class EditProfile extends React.Component {
                                       />
                                     : []
                             }
-                            {this.usuario.tipo_usuario === 'Cliente'
+                            {/*this.usuario.tipo_usuario === 'Cliente'
                                      ? <Cliente
                                    
                                    
                                      />
                                     : []
-                             }
+                        */}
                     </div>
                         
                         
