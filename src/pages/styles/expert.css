@@ -1,3 +1,5 @@
+
+.wrapper{display:block; position:relative; width:100%; margin:0; padding:0; text-align:left; word-wrap:break-word;}
 .Expertos__container {
     
     width: 100%;
@@ -10,11 +12,17 @@
    
    
   }
- 
+  
+  
   .Expertos__container:hover {
     
     opacity: 1;
     
+  }
+  .hoc{
+    display:block; 
+    margin:0 auto;
+   
   }
  
   .container__expert1:hover .texto-encima  {
@@ -104,7 +112,19 @@
  }
 
 
+#pageintro{padding:125px 0;}
+#pageintro article{display:block; max-width:60%; margin:0 auto; text-align:center;}
+#pageintro .heading{margin-bottom:20px; font-size:4rem;}
 
 
 
+.btn, .btn.inverse:hover{color:#FFFFFF; background-color:#95103B;}
+.imgover:hover::before{background:rgba(0,0,0,.55);}
 
+.overlay{position:relative; z-index:1;}
+.overlay::after{display:block; position:absolute; top:0; left:0; width:100%; height:100%; content:""; z-index:-1;}
+.bgded{background-position:top center; background-repeat:no-repeat; background-size:cover;}
+.circle{border-radius:50%; background-clip:padding-box;}
+  
+.btn{
+    display:inline-block; padding:8px 18px 10px; text-transform:uppercase; border:1px solid;}
