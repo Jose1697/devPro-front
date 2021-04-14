@@ -11,6 +11,7 @@ import Contacto from '../pages/Constacto'
 import EditProfile from '../pages/EditProfile'
 import NewProyecto from '../pages/NewProyecto'
 import FormProyecto from '../components/FormProyecto'
+import ProjectDetails from '../pages/ProjectDetails'
 
 const App = () => (
     <BrowserRouter>
@@ -21,6 +22,7 @@ const App = () => (
             <Route exact path="/Expertos" component={Expert}/>
             <Route exact path="/register" component={Register}/>
             <Route exact path="/Proyectos" component={Proyecto}/>
+            <Route exact path="/Proyectos/:projectId" component={ProjectDetails}/>
             <Route exact path="/Nosotros" component={Nosotros}/>
             <Route exact path="/Emprendedor" component={Emprendedor}/>
             <Route exact path="/Contacto" component={Contacto}/>
