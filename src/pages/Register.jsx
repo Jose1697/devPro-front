@@ -55,7 +55,7 @@ class Register extends React.Component{
                 "usuario":this.newUser,
             }
             
-            await fetch('http://localhost:8000/core/cliente/', {
+            await fetch('https://devpro-2021.herokuapp.com/core/cliente/', {
             method: 'POST',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify(cliente)
