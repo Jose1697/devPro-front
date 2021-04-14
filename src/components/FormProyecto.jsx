@@ -134,7 +134,7 @@ class FormProyecto extends React.Component{
                                             <div>
                                                 
                                                 <button  className="btn btn-primary btn-xs" onClick={this.handleClick}>
-                                                    Aun Falta
+                                                    Crear
                                                     
                                                 </button>
                                             </div>
