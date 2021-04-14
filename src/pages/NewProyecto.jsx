@@ -11,6 +11,7 @@ class NewProyecto extends React.Component{
                 <div >
                     Convierte ....en realidad
                      <br/>
+                     <br/>
                     <a class="btn btn-primary" href="/newPro" role="button">Empieza Un Proyecto</a>
                 </div>
              
