@@ -58,12 +58,23 @@ class FormProyecto extends React.Component{
         e.preventDefault();
      
         try {
-            this.state.Proyecto.id_cliente=this.usuario.id;
-            this.state.Proyecto.photo=this.state.photo;
-            
-            console.log(this.state.Proyecto);
-            await api.badges.create(this.state.Proyecto);
-            swal("Registro Exitoso!", "You clicked the button!", "success");
+            if(this.usuario.tipo_usuario === 'Cliente'){
+                this.state.Proyecto.id_cliente=this.usuario.id;
+                this.state.Proyecto.photo=this.state.photo;
+                
+                console.log(this.state.Proyecto);
+                await api.badges.create(this.state.Proyecto);
+                swal("Registro Exitoso!", "You clicked the button!", "success");
+            }
+            if(this.usuario.tipo_usuario === 'Experto'){
+                swal('Procede a crear una cuenta usuaria', "You clicked the button!", "error");
+                
+            }
+            if(this.usuario.tipo_usuario === 'Inversionista'){
+               
+                swal('Procede a crear una cuenta usuaria', "You clicked the button!", "error");
+            }
+         
          
          
           
