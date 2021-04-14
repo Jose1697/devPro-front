@@ -51,10 +51,11 @@ class Register extends React.Component{
 
         if(this.state.form.tipo_usuario === 'Cliente'){
             const cliente = {
-                usuario:this.newUser,
+                "id":this.newUser,
+                "usuario":this.newUser,
             }
             
-            await fetch('https://devpro-2021.herokuapp.com/core/cliente/', {
+            await fetch('http://localhost:8000/core/cliente/', {
             method: 'POST',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify(cliente)

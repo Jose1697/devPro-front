@@ -135,7 +135,7 @@ class EditProfile extends React.Component {
                         <div className="col-6">
                             <h1 className="title-foto">Foto de perfil</h1>
                             <div className="form-foto">
-                            
+                           
                             <h3>¿Deseas cambiar tu foto de perfil?</h3>
                             <div>
                                 <input type="file" onChange={this.handleSave}/>

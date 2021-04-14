@@ -28,7 +28,7 @@ const api = {
 
 
         create(badge) {
-          return callApi(`/core/experto/`, {
+          return callApi(`/core/proyecto/`, {
             method: 'POST',
             body: JSON.stringify(badge),
           });
