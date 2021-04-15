@@ -17,3 +17,15 @@
     height: max-content;
     width: 70%;
 }
+
+.button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Modal{
+    display: flex;
+    flex-direction: column;
+    
+}

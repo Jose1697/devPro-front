@@ -55,7 +55,9 @@ class ListProyectos extends React.Component{
             return (
               <div id="carousel-item" key={badge.id}>
                 
+
                 <Link to={`/Proyectos/${badge.id}`}>  {/* Cambiar el 8 por el id del proyecto */}
+
 
                   <ListItaProyecto badge={badge} />
                 </Link>
