@@ -10,8 +10,14 @@ class Proyecto extends React.Component{
       loading: true,
       error: null,
       data:undefined,
+      dataBuscador:'',
        
       };
+handler=(param) => {
+        this.setState({
+          data:param
+        })
+  }  
 componentDidMount(){
         this.fetchData()
        }
@@ -21,14 +27,17 @@ componentDidMount(){
           try{
            const data=await api.badges.listProyectos();
            console.log("HOLAAAAAAAAAAAs");
-           
+           const dataB=await api.badges.listProyectos();
+           console.log("HOLAAAAAAAAAAAs");
            
            this.setState({loading:false,data:data})
+           this.setState({loading:false,dataBuscador:dataB})
           }catch(error){
            this.setState({loading:false,error:error})
           }
        }  
-       
+  
+
    render(){
     if (this.state.loading === true) {
       return <PageLoader  />;
@@ -37,8 +46,12 @@ componentDidMount(){
         <div className="Fondo1">
            <Navbar />
               <div >
+                    
                     <div className="container-buscador">
-                      < Buscador/>
+                      < Buscador 
+                      lista={this.state.dataBuscador}
+                      handler={this.handler} 
+                      />
                     </div>
                     <div>
                       {<ListProyectos lista={this.state.data}/>}
