@@ -79,6 +79,23 @@ class Proyecto extends React.Component{
           },
         ],
       };
+componentDidMount(){
+        this.fetchData()
+       }
+       fetchData=async () => {
+          this.setState({loading:true,error:null})
+     
+          try{
+           const data1=await api.badges.list();
+           console.log(data1);
+           console.log(data1.usuario);
+           
+           this.setState({loading:false,data1:data1})
+          }catch(error){
+           this.setState({loading:false,error:error})
+          }
+       }  
+       
    render(){
        return(
         <div className="Fondo1">

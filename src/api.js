@@ -1,4 +1,4 @@
-const BASE_URL = 'http://localhost:8000';
+const BASE_URL = 'https://devpro-2021.herokuapp.com';
 
 
 
@@ -23,6 +23,10 @@ const api = {
 
         list() {
           return callApi('/core/experto/');
+        },
+        
+        listProyectos() {
+          return callApi('/core/proyecto/');
         },
 
 

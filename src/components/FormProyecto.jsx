@@ -15,6 +15,7 @@ class FormProyecto extends React.Component{
                 descripcion_proyecto:'',
                 financiamiento_proyecto:'',
                 photo:'',
+                acumulado:'',
               },  
         } 
         this.usuario = JSON.parse(localStorage.getItem('usuario'))
@@ -61,7 +62,7 @@ class FormProyecto extends React.Component{
             if(this.usuario.tipo_usuario === 'Cliente'){
                 this.state.Proyecto.id_cliente=this.usuario.id;
                 this.state.Proyecto.photo=this.state.photo;
-                
+                this.state.Proyecto.acumulado=0;
                 console.log(this.state.Proyecto);
                 await api.badges.create(this.state.Proyecto);
                 swal("Registro Exitoso!", "You clicked the button!", "success");
