@@ -2,6 +2,7 @@ import React from 'react';
 import Navbar from '../components/Navbar'
 import './styles/expert.css';
 import { Link } from 'react-router-dom';
+import Glyphicon from '@strongdm/glyphicon'
 class NewProyecto extends React.Component{
    render(){
        return(
@@ -19,7 +20,8 @@ class NewProyecto extends React.Component{
                         <Link class="btn btn-primary" to="/newPro" role="button" >
                             Empieza un 
                                Proyecto
-                                <span className="glyphicon glyphicon-chevron-right"></span>  
+                               <Glyphicon glyph='chevron-right'/>
+                                
                         </Link>
                     </article>
    
