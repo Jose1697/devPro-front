@@ -8,17 +8,18 @@ class ListItaProyecto extends React.Component {
         <div >
           <img
             className="BadgesListItem__avatar1"
-            src={this.props.badge.avatarUrl}
+            src={this.props.badge.photo}
             alt=""
           />
   
-          <div>
+          <div className="datos">
             <strong>
-              {this.props.badge.firstName} {this.props.badge.lastName}
+              {this.props.badge.id_cliente.usuario.first_name} {this.props.badge.id_cliente.usuario.last_name}
             </strong>
-            <br />@{this.props.badge.twitter}
+            <div>Proyecto: {this.props.badge.nombre_proyecto}</div>
+            
             <br />
-            {this.props.badge.jobTitle}
+           
           </div>
         </div>
       );
@@ -40,11 +41,12 @@ class ListProyectos extends React.Component{
         <br/>
         <br/>
         <br/>
-        <br/>
         
+        
+        
+        <h1 className="titulo"> Proyectos</h1> 
+        <h1 className="titulo2"></h1> 
         <br/>
-        <br/>
-        <h1 className="titulo">Lista de Proyectos</h1> 
         {/* <h1 className="titulo2"></h1>   */}
         </div>
         <section className="carrusel" >
@@ -53,7 +55,10 @@ class ListProyectos extends React.Component{
             return (
               <div id="carousel-item" key={badge.id}>
                 
-                <Link to="/Proyectos/1">  {/* Cambiar el 8 por el id del proyecto */}
+
+                <Link to={`/Proyectos/${badge.id}`}>  {/* Cambiar el 8 por el id del proyecto */}
+
+
                   <ListItaProyecto badge={badge} />
                 </Link>
                 

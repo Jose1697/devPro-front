@@ -120,6 +120,8 @@ class FormProyecto extends React.Component{
                                                 onChange={this.handleChange}
                                                 value={this.state.Proyecto.nombre_proyecto}
                                                 />
+                                                <div class="valid-feedback">¡Ok válido!</div>
+                                               <div class="invalid-feedback">Complete el campo.</div>
                                             </div>
                                             
                                             <div className="form-group">
