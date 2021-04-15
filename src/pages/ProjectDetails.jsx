@@ -92,7 +92,7 @@ class ProjectDetails extends React.Component{
 
                                     <div className="button">
                                         <button onClick={() => {this.handleOpenModal()}} type="button" className="btn btn-success">Invertir</button>
-                                        <Modal isOpen={this.state.isOpenModal} onClose={this.handleCloseModal}>     
+                                        <Modal project={this.state.project} isOpen={this.state.isOpenModal} onClose={this.handleCloseModal}>     
                                             ¿Cuanto desea aportar al Proyecto?   
                                         </Modal>
                                     </div>
