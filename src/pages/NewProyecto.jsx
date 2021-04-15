@@ -1,8 +1,6 @@
 import React from 'react';
 import Navbar from '../components/Navbar'
-import FormProyecto from '../components/FormProyecto'
 import './styles/expert.css';
-import Glyphicon from '@strongdm/glyphicon'
 import { Link } from 'react-router-dom';
 class NewProyecto extends React.Component{
    render(){

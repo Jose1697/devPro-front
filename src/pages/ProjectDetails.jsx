@@ -2,7 +2,8 @@ import React from 'react';
 import Footer from '../components/Footer';
 import Navbar from '../components/Navbar';
 import  Modal  from '../components/Modal';
-import './styles/projectDetail.css'
+import './styles/projectDetail.css';
+import Loading from '../components/loading';
 
 
 class ProjectDetails extends React.Component{
@@ -12,14 +13,18 @@ class ProjectDetails extends React.Component{
             first_name:"",
             last_name:""
         },
-        isOpenModal:false
+        isOpenModal:false,
+        loading: true
     }
 
     constructor(props){
         super(props)
-        this.fetchData()
         this.valor = 0
         this.flag = false
+    }
+
+    componentDidMount(){
+        this.fetchData()
     }
     
    
@@ -40,8 +45,10 @@ class ProjectDetails extends React.Component{
                 autor:{
                     first_name:projectData.id_cliente.usuario.first_name,
                     last_name:projectData.id_cliente.usuario.last_name
-                }
+                },
+                loading:false
             })
+            
             
         } catch (error) {
             console.error(error);
@@ -64,6 +71,10 @@ class ProjectDetails extends React.Component{
 
 
     render(){
+        if(this.state.loading === true){
+            return <Loading />
+        }
+
         this.valor = (this.state.project.acumulado/this.state.project.financiamiento_proyecto)*100
         console.log(parseInt(this.valor));
         

@@ -9,7 +9,7 @@ class ListItaDocente extends React.Component {
           <img
             className="BadgesListItem__avatar"
             src={this.props.expert.usuario.photo}
-            
+            alt="experto"
           />
   
           <div className="datos">
