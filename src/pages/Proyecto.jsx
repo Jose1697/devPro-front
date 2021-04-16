@@ -73,7 +73,6 @@ componentDidMount(){
                
                       < Buscador 
                       lista={this.state.dataBuscador}
-                   
                       handler={this.handler} 
                       />
                   
