@@ -74,11 +74,17 @@ class Navbar extends React.Component {
                         Emprendedores
                       </Link>
                     </li>
-                    <li className="nav-item">
-                      <Link className="nav-link" to="/NewProyecto">
-                        Empieza un Proyecto
-                      </Link>
-                    </li>
+                    {
+                      this.state.usuario.tipo_usuario === 'Cliente' ?
+                      <li className="nav-item">
+                        <Link className="nav-link" to="/NewProyecto">
+                          Empieza un Proyecto
+                        </Link>
+                      </li> :
+                      []
+
+                    }
+                    
                     {/*
                     <li className="nav-item dropdown">
                       <Link className="nav-link dropdown-toggle" to="/" id="navbardrop" data-toggle="dropdown">
