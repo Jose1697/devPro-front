@@ -7,8 +7,9 @@ class ListItaProyecto extends React.Component {
     opciones:{responsive:true},
     data : {
     labels: [
-        'Financiamiento',
+        
         'Acumulado',
+        'Financiamiento',
       ],
     datasets: [{
       label: 'My First Dataset',
