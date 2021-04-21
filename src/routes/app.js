@@ -12,6 +12,7 @@ import EditProfile from '../pages/EditProfile'
 import NewProyecto from '../pages/NewProyecto'
 import FormProyecto from '../components/FormProyecto'
 import ProjectDetails from '../pages/ProjectDetails'
+import Services from '../pages/Services'
 
 const App = () => (
     <BrowserRouter>
@@ -29,6 +30,7 @@ const App = () => (
             <Route exact path="/Profile" component={EditProfile}/>
             <Route exact path="/NewProyecto" component={NewProyecto}/>
             <Route exact path="/newPro" component={FormProyecto}/>
+            <Route exact path="/services" component={Services}/>
         </Switch>
         
             

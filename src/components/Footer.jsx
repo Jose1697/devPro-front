@@ -5,7 +5,7 @@ import  './styles/Footer.scss'
 const Footer = () => {
     return(
         <>
-        <section className="footer mt-4">
+        <section className="footer">
             <div className="container foot">
                 <div className="copyright">
                     <p className="m-0">© 2021 DevPro</p>

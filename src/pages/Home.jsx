@@ -34,7 +34,7 @@ const Home = () => {
                                     que busca que los emprendimientos sean innovadores, 
                                     dinámicos, escalables y socialmente responsables.
                                     </p>
-                                    <Link className="btn btn-primary mr-3" to="">Ver Servicios</Link>
+                                    <Link className="btn btn-primary mr-3" to="/services">Ver Servicios</Link>
                                     <Link className="btn btn-success" to="/NewProyecto">Tengo un Proyecto</Link>
                                 </div>
                             </div>

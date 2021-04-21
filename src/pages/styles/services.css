@@ -1,0 +1,17 @@
+.services{
+    background-image: linear-gradient(#292727, #fd5757);
+    height: calc(100vh - 186px);
+}
+
+.etapa{
+    border: 1px solid white;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px 0px;
+}
+
+.etapa img{
+    width: min-content
+}
