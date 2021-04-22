@@ -32,7 +32,7 @@ class ProjectDetails extends React.Component{
     fetchData = async () => {
        
         try {
-            const projectResponse = await fetch(`https://devpro-2021.herokuapp.com/core/proyecto/${this.props.match.params.projectId}/`)
+            const projectResponse = await fetch(`https://devpro-back.herokuapp.com/core/proyecto/${this.props.match.params.projectId}/`)
             const projectData = await  projectResponse.json()
             if(projectData.acumulado===null){
                 projectData.acumulado=0

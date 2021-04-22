@@ -53,13 +53,13 @@ class EditProfile extends React.Component {
     handleSubmit = async () => {
         // event.preventDefault()
     
-        await fetch(`https://devpro-2021.herokuapp.com/usuario/usuario/${this.usuario.id}/`, {
+        await fetch(`https://devpro-back.herokuapp.com/usuario/usuario/${this.usuario.id}/`, {
             method: 'PATCH',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify(this.state)
         })
 
-        const response = await fetch(`https://devpro-2021.herokuapp.com/usuario/usuario/${this.usuario.id}/`)
+        const response = await fetch(`https://devpro-back.herokuapp.com/usuario/usuario/${this.usuario.id}/`)
         const data = await  response.json() 
         await localStorage.setItem('usuario', JSON.stringify(data))
         await this.props.history.push('/')

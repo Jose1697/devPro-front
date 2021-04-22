@@ -18,7 +18,7 @@ class Login extends React.Component{
 
     handleSubmit = event => {
         event.preventDefault()
-        fetch('https://devpro-2021.herokuapp.com/usuario/usuario/login/', {
+        fetch('https://devpro-back.herokuapp.com/usuario/usuario/login/', {
           method: 'POST',
           headers: {'Content-Type': 'application/json'},
           body: JSON.stringify(this.state.form)

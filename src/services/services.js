@@ -13,7 +13,7 @@ export const actualizarLocalStorage = () => {
 export const obtenerUsuario = async () => {
     const usuario = JSON.parse(localStorage.getItem('usuario'))
     
-    const response = await fetch(`https://devpro-2021.herokuapp.com/usuario/usuario/${usuario.id}/`)
+    const response = await fetch(`https://devpro-back.herokuapp.com/usuario/usuario/${usuario.id}/`)
     const data = await response.json()     
     
     return data 

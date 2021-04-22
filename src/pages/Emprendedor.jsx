@@ -21,7 +21,7 @@ class Emprendedor extends React.Component{
     this.setState({loading:true,error:null})
 
     try{
-     const data1=await fetch('https://devpro-2021.herokuapp.com/core/cliente/')
+     const data1=await fetch('https://devpro-back.herokuapp.com/core/cliente/')
      const clientes = await data1.json()
     
      

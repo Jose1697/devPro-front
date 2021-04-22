@@ -38,7 +38,7 @@ class Register extends React.Component{
         // }
         console.log(this.state.form.last_name);
         
-        await fetch('https://devpro-2021.herokuapp.com/usuario/usuario/register/', {
+        await fetch('https://devpro-back.herokuapp.com/usuario/usuario/register/', {
             method: 'POST',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify(this.state.form)
@@ -55,7 +55,7 @@ class Register extends React.Component{
                 "usuario":this.newUser,
             }
             
-            await fetch('https://devpro-2021.herokuapp.com/core/cliente/', {
+            await fetch('https://devpro-back.herokuapp.com/core/cliente/', {
             method: 'POST',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify(cliente)
@@ -66,7 +66,7 @@ class Register extends React.Component{
                 "id":this.newUser,
                 "usuario": this.newUser  
             }
-            await fetch('https://devpro-2021.herokuapp.com/core/experto/', {
+            await fetch('https://devpro-back.herokuapp.com/core/experto/', {
             method: 'POST',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify(experto)
@@ -77,7 +77,7 @@ class Register extends React.Component{
                 "id": this.newUser,
                 "usuario": this.newUser
             }
-            await fetch('https://devpro-2021.herokuapp.com/core/inversionista/', {
+            await fetch('https://devpro-back.herokuapp.com/core/inversionista/', {
             method: 'POST',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify(inversionista)

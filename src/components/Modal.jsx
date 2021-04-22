@@ -16,7 +16,7 @@ function Modal(props){
             acumulado: parseInt(donacion) + parseInt(props.project.acumulado)
         } 
 
-        await fetch(`https://devpro-2021.herokuapp.com/core/proyecto/${props.project.id}/`, {
+        await fetch(`https://devpro-back.herokuapp.com/core/proyecto/${props.project.id}/`, {
             method: 'PATCH',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify(nuevoValor)
