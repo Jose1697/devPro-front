@@ -1,0 +1,15 @@
+.suscripcion{
+    display: flex;
+    align-items: center;
+}
+
+.suscripcion-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.card{
+    width:35%
+}
