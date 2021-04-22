@@ -17,7 +17,7 @@ class Suscripcion extends React.Component{
 
                             <div className="card-body">
                                 <h5 className="card-title">Plan Premium</h5>
-                                <p className="card-text">
+                                <p className="beneficios card-text">
                                     <ul>
                                         <li type="disc">Podras publicar tus proyectos.</li>
                                         <li type="disc">Tendras asesoria de parte de los expertos de DevPro</li>
