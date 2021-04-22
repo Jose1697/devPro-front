@@ -3,6 +3,9 @@ import Footer from '../components/Footer';
 import Navbar from '../components/Navbar';
 
 class misProyectos extends React.Component{
+    state = {
+        usuario: JSON.parse(localStorage.getItem('usuario'))
+    }
 
     render(){
         return(
@@ -29,11 +32,11 @@ class misProyectos extends React.Component{
                             </div>
                             <div className="card-body">
                                 <blockquote className="blockquote mb-0">
-                                <p>Inserte contenido, aun no lo hay!</p>
+                                <p>Aun no  hay contenido!</p>
                                 </blockquote>
-
-                                <button type="button" className="btn btn-success">Subir Archivos</button>
-                                
+                                {this.state.usuario.tipo_usuario === "Experto" ?
+                                <button type="button" className="btn btn-success">Subir Archivos</button> : []
+                                }
                             </div>
                         </div>
 
@@ -43,9 +46,11 @@ class misProyectos extends React.Component{
                             </div>
                             <div className="card-body">
                                 <blockquote className="blockquote mb-0">
-                                <p>Inserte contenido, aun no lo hay!</p>
+                                <p>Aun no  hay contenido!</p>
                                 </blockquote>
-                                <button type="button" className="btn btn-success">Subir Archivos</button>
+                                {this.state.usuario.tipo_usuario === "Experto" ?
+                                <button type="button" className="btn btn-success">Subir Archivos</button> : []
+                                }
                             </div>
                         </div>
 
@@ -55,9 +60,11 @@ class misProyectos extends React.Component{
                             </div>
                             <div className="card-body">
                                 <blockquote className="blockquote mb-0">
-                                <p>Inserte contenido, aun no lo hay!</p>
+                                <p>Aun no  hay contenido!</p>
                                 </blockquote>
-                                <button type="button" className="btn btn-success">Subir Archivos</button>
+                                {this.state.usuario.tipo_usuario === "Experto" ?
+                                <button type="button" className="btn btn-success">Subir Archivos</button> : []
+                                }
                             </div>
                         </div>
 
@@ -67,9 +74,11 @@ class misProyectos extends React.Component{
                             </div>
                             <div className="card-body">
                                 <blockquote className="blockquote mb-0">
-                                <p>Inserte contenido, aun no lo hay!</p>
+                                <p>Aun no  hay contenido!</p>
                                 </blockquote>
-                                <button type="button" className="btn btn-success">Subir Archivos</button>
+                                {this.state.usuario.tipo_usuario === "Experto" ?
+                                <button type="button" className="btn btn-success">Subir Archivos</button> : []
+                                }
                             </div>
                         </div>
 
@@ -79,9 +88,11 @@ class misProyectos extends React.Component{
                             </div>
                             <div className="card-body">
                                 <blockquote className="blockquote mb-0">
-                                <p>Inserte contenido, aun no lo hay!</p>
+                                <p>Aun no  hay contenido!</p>
                                 </blockquote>
-                                <button type="button" className="btn btn-success">Subir Archivos</button>
+                                {this.state.usuario.tipo_usuario === "Experto" ?
+                                <button type="button" className="btn btn-success">Subir Archivos</button> : []
+                                }
                             </div>
                         </div>
 
@@ -91,9 +102,11 @@ class misProyectos extends React.Component{
                             </div>
                             <div className="card-body">
                                 <blockquote className="blockquote mb-0">
-                                <p>Inserte contenido, aun no lo hay!</p>
+                                <p>Aun no  hay contenido!</p>
                                 </blockquote>
-                                <button type="button" className="btn btn-success">Subir Archivos</button>
+                                {this.state.usuario.tipo_usuario === "Experto" ?
+                                <button type="button" className="btn btn-success">Subir Archivos</button> : []
+                                }
                             </div>
                         </div>
 
@@ -103,9 +116,11 @@ class misProyectos extends React.Component{
                             </div>
                             <div className="card-body">
                                 <blockquote className="blockquote mb-0">
-                                <p>Inserte contenido, aun no lo hay!</p>
+                                <p>Aun no  hay contenido!</p>
                                 </blockquote>
-                                <button type="button" className="btn btn-success">Subir Archivos</button>
+                                {this.state.usuario.tipo_usuario === "Experto" ?
+                                <button type="button" className="btn btn-success">Subir Archivos</button> : []
+                                }
                             </div>
                         </div>
 
@@ -115,9 +130,11 @@ class misProyectos extends React.Component{
                             </div>
                             <div className="card-body">
                                 <blockquote className="blockquote mb-0">
-                                <p>Inserte contenido, aun no lo hay!</p>
+                                <p>Aun no  hay contenido!</p>
                                 </blockquote>
-                                <button type="button" className="btn btn-success">Subir Archivos</button>
+                                {this.state.usuario.tipo_usuario === "Experto" ?
+                                <button type="button" className="btn btn-success">Subir Archivos</button> : []
+                                }
                             </div>
                         </div>
 
@@ -127,9 +144,11 @@ class misProyectos extends React.Component{
                             </div>
                             <div className="card-body">
                                 <blockquote className="blockquote mb-0">
-                                <p>Inserte contenido, aun no lo hay!</p>
+                                <p>Aun no  hay contenido!</p>
                                 </blockquote>
-                                <button type="button" className="btn btn-success">Subir Archivos</button>
+                                {this.state.usuario.tipo_usuario === "Experto" ?
+                                <button type="button" className="btn btn-success">Subir Archivos</button> : []
+                                }
                             </div>
                         </div>
 
@@ -139,9 +158,11 @@ class misProyectos extends React.Component{
                             </div>
                             <div className="card-body">
                                 <blockquote className="blockquote mb-0">
-                                <p>Inserte contenido, aun no lo hay!</p>
+                                <p>Aun no  hay contenido!</p>
                                 </blockquote>
-                                <button type="button" className="btn btn-success">Subir Archivos</button>
+                                {this.state.usuario.tipo_usuario === "Experto" ?
+                                <button type="button" className="btn btn-success">Subir Archivos</button> : []
+                                }
                             </div>
                         </div>
 
@@ -151,9 +172,11 @@ class misProyectos extends React.Component{
                             </div>
                             <div className="card-body">
                                 <blockquote className="blockquote mb-0">
-                                <p>Inserte contenido, aun no lo hay!</p>
+                                <p>Aun no  hay contenido!</p>
                                 </blockquote>
-                                <button type="button" className="btn btn-success">Subir Archivos</button>
+                                {this.state.usuario.tipo_usuario === "Experto" ?
+                                <button type="button" className="btn btn-success">Subir Archivos</button> : []
+                                }
                             </div>
                         </div>
 

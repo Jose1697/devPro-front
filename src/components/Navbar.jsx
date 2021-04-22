@@ -94,7 +94,7 @@ class Navbar extends React.Component {
                         
                         <li className="nav-item">
                           <Link className="nav-link" to="/myproject">
-                            Mis proyectos
+                            Mis cursos
                           </Link>
                         </li> : [] 
                       : 
@@ -131,7 +131,14 @@ class Navbar extends React.Component {
                     
                           <ul className="opciones">
                               <li><Link  to="/profile" >Cuenta</Link></li>
-                              <li><Link  to="/suscripcion" >Suscripcion</Link></li>
+                              {this.state.usuario != null ?
+                                  this.state.usuario.tipo_usuario === "Cliente" ? 
+                                  <li><Link  to="/suscripcion" >Suscripcion</Link></li>
+                                  : []
+                                :
+                                []
+                              }
+                              
                               <li><Link onClick={this.handleClick}  to="/login">Cerrar Sesión</Link></li>
                           </ul>
                       </div> :

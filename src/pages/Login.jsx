@@ -33,8 +33,9 @@ class Login extends React.Component{
                 const cliente = await data1.json()
                 console.log(cliente);
                 localStorage.setItem('cliente', JSON.stringify(cliente))
-                this.props.history.push('/')
+                
             }
+            this.props.history.push('/')
         }else{
             swal('El email o contraseña son incorrectos', "You clicked the button!", "error");
         }
