@@ -4,6 +4,7 @@ import Navbar from '../components/Navbar';
 import  Modal  from '../components/Modal';
 import './styles/projectDetail.css';
 import Loading from '../components/loading';
+import ModalExperto from '../components/ModalExperto';
 
 
 class ProjectDetails extends React.Component{
@@ -118,9 +119,9 @@ class ProjectDetails extends React.Component{
 
                                             <div className="button">
                                             <button onClick={() => {this.handleOpenModal()}} type="button" className="btn btn-success">Mentorizar</button>
-                                            {/* <Modal project={this.state.project} isOpen={this.state.isOpenModal} onClose={this.handleCloseModal}>     
-                                                ¿Cuanto desea aportar al Proyecto?   
-                                            </Modal> */}
+                                                <ModalExperto isOpen={this.state.isOpenModal} onClose={this.handleCloseModal}>     
+                                                    Desea guiar este proyecto?   
+                                                </ModalExperto>
                                             </div> :
                                     
                                         
