@@ -85,9 +85,9 @@ class EditProfile extends React.Component {
         try {
             this.state.Experto.usuario=this.usuario.id;
             //por mientras
-            this.state.Experto.id_tipo= 1;
-            this.state.Experto.id=this.usuario.id;
             
+            this.state.Experto.id=this.usuario.id;
+           
             console.log(this.state.Experto);
             await api.badges.create(this.state.Experto);
             swal("Registro Exitoso!", "You clicked the button!", "success");
@@ -105,9 +105,9 @@ class EditProfile extends React.Component {
         try {
             this.state.Experto.usuario=this.usuario.id;
             //por mientras
-            this.state.Experto.id_tipo= 1;
+           
             this.state.Experto.id=this.usuario.id;
-            
+            this.state.Experto.usuario=this.usuario.id;
             console.log(this.state.Experto);
             await api.badges.update(this.state.Experto.id, this.state.Experto);
             
