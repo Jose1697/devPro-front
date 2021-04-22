@@ -53,8 +53,18 @@
     ></df-messenger>
     <script>
       const dfMessenger = document.querySelector('df-messenger');
-      dfMessenger.addEventListener('dfMessengerLoaded', function (event) {
-          console.log("Hola mundo")
+      dfMessenger.addEventListener('df-messenger-loaded', function (event) {
+          console.log("Hola mundo");
+      });
+      dfMessenger.addEventListener('df-button-clicked', function (event) {
+        if (event.detail.element.text == "Click para ver los proyectos"){
+          console.log("vER PROYECTOS");
+          history.pushState(null, "", "https://dev-proo.herokuapp.com/Proyectos");
+        }
+        else {
+          console.log("Crear proyectos");
+          history.pushState(null, "", "https://dev-proo.herokuapp.com/NewProyecto");
+        }
       });
     </script>
   
