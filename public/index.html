@@ -51,7 +51,12 @@
       agent-id="9a04ded0-2b8b-44e9-b1a3-9fab29f894cb"
       language-code="es"
     ></df-messenger>
-  
+    <script>
+      const dfMessenger = document.querySelector('df-messenger');
+      dfMessenger.addEventListener('dfMessengerLoaded', function (event) {
+          console.log("Hola mundo")
+      });
+    </script>
   
   </body>
 </html>
