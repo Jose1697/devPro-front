@@ -16,27 +16,28 @@ class Login extends React.Component{
         this.setState({form: formulario});
     }
 
-    handleSubmit = event => {
+    handleSubmit = async(event) => {
         event.preventDefault()
-        fetch('https://devpro-back.herokuapp.com/usuario/usuario/login/', {
+        const data = await fetch('https://devpro-back.herokuapp.com/usuario/usuario/login/', {
           method: 'POST',
           headers: {'Content-Type': 'application/json'},
           body: JSON.stringify(this.state.form)
         })
-        .then( data => data.json())
-        .then( data => {
-            if(data.Usuario){
-                // swal(`${data.Usuario.first_name} se ha logueado correctamente`, "You clicked the button!", "success");
-                // alert(`${data.Usuario.first_name} se ha logueado correctamente`)
-                localStorage.setItem('usuario', JSON.stringify(data.Usuario))
+        const user = await data.json()
+        console.log(user);
+        if(user.Usuario){
+            localStorage.setItem('usuario', JSON.stringify(user.Usuario))
+            
+            if(user.Usuario.tipo_usuario === "Cliente"){
+                const data1 = await fetch(`https://devpro-back.herokuapp.com/core/cliente/${user.Usuario.id}`)
+                const cliente = await data1.json()
+                console.log(cliente);
+                localStorage.setItem('cliente', JSON.stringify(cliente))
                 this.props.history.push('/')
-            }else{
-                swal('El email o contraseña son incorrectos', "You clicked the button!", "error");
-                // alert('El email o contraseña son incorrectos')
             }
-        })
-        //console.log(this.state.form);
-        // this.props.history.push('/')
+        }else{
+            swal('El email o contraseña son incorrectos', "You clicked the button!", "error");
+        }
 
     }
 

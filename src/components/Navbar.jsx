@@ -13,7 +13,8 @@ class Navbar extends React.Component {
     super(props)
     
     this.state= {
-      usuario: JSON.parse(localStorage.getItem('usuario'))
+      usuario: JSON.parse(localStorage.getItem('usuario')),
+      cliente: JSON.parse(localStorage.getItem('cliente'))
     }
   }
 
@@ -26,6 +27,9 @@ class Navbar extends React.Component {
 
   handleClick = event => {
     localStorage.removeItem("usuario")
+    if(this.state.cliente != null){
+      localStorage.removeItem("cliente")
+    }
   }
   render(){
     
@@ -58,12 +62,6 @@ class Navbar extends React.Component {
                 >
                   <ul className="navbar-nav ml-auto">
                     <li className="nav-item">
-                      <Link className="nav-link" to="/">
-                      <FontAwesomeIcon icon={faHome} />
-                        Home<span className="sr-only">(current)</span>
-                      </Link>
-                    </li>
-                    <li className="nav-item">
                       
                       <Link className="nav-link" to="/Nosotros">
                         Nosotros
@@ -74,9 +72,9 @@ class Navbar extends React.Component {
                         Emprendedores
                       </Link>
                     </li>
-                    {this.state.usuario != null ? 
+                    {(this.state.usuario != null) && (this.state.cliente != null) ? 
                         
-                        this.state.usuario.tipo_usuario === 'Cliente' ?
+                        (this.state.usuario.tipo_usuario === 'Cliente') && (this.state.cliente.suscripcion === "activo") ?
                           <li className="nav-item">
                             <Link className="nav-link" to="/NewProyecto">
                               Empieza un Proyecto
@@ -87,23 +85,23 @@ class Navbar extends React.Component {
                         :
                         []
                     }
+
                     
-                    {/*
-                    <li className="nav-item dropdown">
-                      <Link className="nav-link dropdown-toggle" to="/" id="navbardrop" data-toggle="dropdown">
-                        Empresas y Entidades
-                      </Link>
                     
-                      <div className="dropdown-menu">
-                        <Link className="dropdown-item" to="#Formulacion">Formulacion de Proyectos</Link>
-                        <Link className="dropdown-item" to="#Talleres">Talleres y cursos de Innovacion</Link>
-                        <Link className="dropdown-item" to="#Talleres">Talleres y cursos de Innovacion</Link>
-                        <Link className="dropdown-item" to="#Talleres">Talleres y cursos de Innovacion</Link>
-                        <Link className="dropdown-item" to="#Talleres">Talleres y cursos de Innovacion</Link>
+                    {
+                      this.state.usuario != null ? 
+                      (this.state.usuario.tipo_usuario === 'Cliente') || (this.state.usuario.tipo_usuario === 'Experto')?
+                        
+                        <li className="nav-item">
+                          <Link className="nav-link" to="/Proyectos">
+                            Mis proyectos
+                          </Link>
+                        </li> : [] 
+                      : 
+                      []
                       
-                      </div>
-                    </li>
-                    */}
+                    }
+
                     <li className="nav-item">
                       <Link className="nav-link" to="/Proyectos">
                         Proyectos
@@ -133,6 +131,7 @@ class Navbar extends React.Component {
                     
                           <ul className="opciones">
                               <li><Link  to="/profile" >Cuenta</Link></li>
+                              <li><Link  to="/suscripcion" >Suscripcion</Link></li>
                               <li><Link onClick={this.handleClick}  to="/login">Cerrar Sesión</Link></li>
                           </ul>
                       </div> :

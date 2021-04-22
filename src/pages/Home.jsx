@@ -12,7 +12,8 @@ class Home extends React.Component {
     constructor(props){
         super(props)
         this.state = {
-            usuario: JSON.parse(localStorage.getItem('usuario'))
+            usuario: JSON.parse(localStorage.getItem('usuario')),
+            cliente: JSON.parse(localStorage.getItem('cliente'))
         }
         
     }
@@ -46,8 +47,8 @@ class Home extends React.Component {
                                         dinámicos, escalables y socialmente responsables.
                                         </p>
                                         <Link className="btn btn-primary mr-3" to="/services">Ver Servicios</Link>
-                                        {   this.state.usuario != null ?
-                                                this.state.usuario.tipo_usuario === 'Cliente' ?
+                                        {   (this.state.usuario != null) && (this.state.cliente != null) ?
+                                                (this.state.usuario.tipo_usuario === 'Cliente') && (this.state.cliente.suscripcion === "activo")  ?
                                                 <Link className="btn btn-success" to="/NewProyecto">Tengo un Proyecto</Link> :
                                                 []
                                             :
