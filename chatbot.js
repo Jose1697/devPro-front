@@ -1,3 +1,4 @@
-window.addEventListener("dfMessengerLoaded", function (event){
-    console.log("Chatbot inicializado");
+const dfMessenger = document.querySelector('df-messenger');
+dfMessenger.addEventListener('dfMessengerLoaded', function (event) {
+    console.log("Hola mundo")
 });
