@@ -11,10 +11,12 @@ class ProjectDetails extends React.Component{
         project:'',
         autor:{
             first_name:"",
-            last_name:""
+            last_name:"",
+            tipo_usuario:""
         },
         isOpenModal:false,
-        loading: true
+        loading: true,
+        usuario: JSON.parse(localStorage.getItem('usuario'))
     }
 
     constructor(props){
@@ -44,7 +46,9 @@ class ProjectDetails extends React.Component{
                 ...this.state,
                 autor:{
                     first_name:projectData.id_cliente.usuario.first_name,
-                    last_name:projectData.id_cliente.usuario.last_name
+                    last_name:projectData.id_cliente.usuario.last_name,
+                    tipo_usuario:projectData.id_cliente.usuario.tipo_usuario,
+
                 },
                 loading:false
             })
@@ -100,13 +104,34 @@ class ProjectDetails extends React.Component{
                                     <div className="progress mb-3">
                                         <div className="progress-bar progress-bar-striped bg-warning" role="progressbar"  aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style={{width: `${this.valor}%`}}>{this.state.project.acumulado}</div> 
                                     </div>
+                                    
+                                    {   this.state.usuario != null   ?
+                                        
+                                            this.state.usuario.tipo_usuario === "Inversionista" ?
+                                            
+                                            <div className="button">
+                                                <button onClick={() => {this.handleOpenModal()}} type="button" className="btn btn-success">Invertir</button>
+                                                <Modal project={this.state.project} isOpen={this.state.isOpenModal} onClose={this.handleCloseModal}>     
+                                                    ¿Cuanto desea aportar al Proyecto?   
+                                                </Modal>
+                                            </div> : this.state.usuario.tipo_usuario === "Experto" ?
 
-                                    <div className="button">
-                                        <button onClick={() => {this.handleOpenModal()}} type="button" className="btn btn-success">Invertir</button>
-                                        <Modal project={this.state.project} isOpen={this.state.isOpenModal} onClose={this.handleCloseModal}>     
-                                            ¿Cuanto desea aportar al Proyecto?   
-                                        </Modal>
-                                    </div>
+                                            <div className="button">
+                                            <button onClick={() => {this.handleOpenModal()}} type="button" className="btn btn-success">Mentorizar</button>
+                                            {/* <Modal project={this.state.project} isOpen={this.state.isOpenModal} onClose={this.handleCloseModal}>     
+                                                ¿Cuanto desea aportar al Proyecto?   
+                                            </Modal> */}
+                                            </div> :
+                                    
+                                        
+                                            []
+                                        :
+
+                                        []
+                                        
+
+                                    }
+                                    
                                     
                                 </div>
                             </div>
