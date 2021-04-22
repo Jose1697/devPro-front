@@ -57,6 +57,7 @@ class ListItaProyecto extends React.Component {
               {this.props.badge.id_cliente.usuario.first_name} {this.props.badge.id_cliente.usuario.last_name}
             </strong>
             <div>Proyecto: {this.props.badge.nombre_proyecto}</div>
+            <div>Estado: Pre Incubación</div>
             
             Financiamiento actual : {((this.props.badge.acumulado)/( this.state.data.datasets[0].data[1]=this.props.badge.financiamiento_proyecto)).toFixed(2)*100}%
             <Doughnut data={this.state.data} />
