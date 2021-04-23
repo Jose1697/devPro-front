@@ -1,6 +1,7 @@
 import React from 'react'
 import Footer from '../components/Footer';
 import Navbar from '../components/Navbar';
+import './styles/misProyectos.css'
 
 class misProyectos extends React.Component{
     state = {
@@ -32,7 +33,7 @@ class misProyectos extends React.Component{
                             </div>
                             <div className="card-body">
                                 <blockquote className="blockquote mb-0">
-                                <p>Aun no  hay contenido!</p>
+                                    <img className="img"  src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Light_green_check.svg/600px-Light_green_check.svg.png" alt=".."/>
                                 </blockquote>
                                 {this.state.usuario.tipo_usuario === "Experto" ?
                                 <button type="button" className="btn btn-success">Subir Archivos</button> : []
@@ -46,7 +47,7 @@ class misProyectos extends React.Component{
                             </div>
                             <div className="card-body">
                                 <blockquote className="blockquote mb-0">
-                                <p>Aun no  hay contenido!</p>
+                                <img className="img"  src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Light_green_check.svg/600px-Light_green_check.svg.png" alt=".."/>
                                 </blockquote>
                                 {this.state.usuario.tipo_usuario === "Experto" ?
                                 <button type="button" className="btn btn-success">Subir Archivos</button> : []
@@ -60,7 +61,7 @@ class misProyectos extends React.Component{
                             </div>
                             <div className="card-body">
                                 <blockquote className="blockquote mb-0">
-                                <p>Aun no  hay contenido!</p>
+                                <img className="img"  src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Light_green_check.svg/600px-Light_green_check.svg.png" alt=".."/>
                                 </blockquote>
                                 {this.state.usuario.tipo_usuario === "Experto" ?
                                 <button type="button" className="btn btn-success">Subir Archivos</button> : []
@@ -74,7 +75,7 @@ class misProyectos extends React.Component{
                             </div>
                             <div className="card-body">
                                 <blockquote className="blockquote mb-0">
-                                <p>Aun no  hay contenido!</p>
+                                <img className="img"  src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Light_green_check.svg/600px-Light_green_check.svg.png" alt=".."/>
                                 </blockquote>
                                 {this.state.usuario.tipo_usuario === "Experto" ?
                                 <button type="button" className="btn btn-success">Subir Archivos</button> : []
@@ -88,7 +89,7 @@ class misProyectos extends React.Component{
                             </div>
                             <div className="card-body">
                                 <blockquote className="blockquote mb-0">
-                                <p>Aun no  hay contenido!</p>
+                                <img className="img"  src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Light_green_check.svg/600px-Light_green_check.svg.png" alt=".."/>
                                 </blockquote>
                                 {this.state.usuario.tipo_usuario === "Experto" ?
                                 <button type="button" className="btn btn-success">Subir Archivos</button> : []
@@ -102,7 +103,7 @@ class misProyectos extends React.Component{
                             </div>
                             <div className="card-body">
                                 <blockquote className="blockquote mb-0">
-                                <p>Aun no  hay contenido!</p>
+                                <img className="img"  src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Light_green_check.svg/600px-Light_green_check.svg.png" alt=".."/>
                                 </blockquote>
                                 {this.state.usuario.tipo_usuario === "Experto" ?
                                 <button type="button" className="btn btn-success">Subir Archivos</button> : []
@@ -116,7 +117,7 @@ class misProyectos extends React.Component{
                             </div>
                             <div className="card-body">
                                 <blockquote className="blockquote mb-0">
-                                <p>Aun no  hay contenido!</p>
+                                <img className="img"  src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Light_green_check.svg/600px-Light_green_check.svg.png" alt=".."/>
                                 </blockquote>
                                 {this.state.usuario.tipo_usuario === "Experto" ?
                                 <button type="button" className="btn btn-success">Subir Archivos</button> : []
@@ -130,7 +131,7 @@ class misProyectos extends React.Component{
                             </div>
                             <div className="card-body">
                                 <blockquote className="blockquote mb-0">
-                                <p>Aun no  hay contenido!</p>
+                                <img className="img"  src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Red_check.svg/1200px-Red_check.svg.png" alt=".."/>
                                 </blockquote>
                                 {this.state.usuario.tipo_usuario === "Experto" ?
                                 <button type="button" className="btn btn-success">Subir Archivos</button> : []
@@ -144,7 +145,7 @@ class misProyectos extends React.Component{
                             </div>
                             <div className="card-body">
                                 <blockquote className="blockquote mb-0">
-                                <p>Aun no  hay contenido!</p>
+                                <img className="img"  src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Red_check.svg/1200px-Red_check.svg.png" alt=".."/>
                                 </blockquote>
                                 {this.state.usuario.tipo_usuario === "Experto" ?
                                 <button type="button" className="btn btn-success">Subir Archivos</button> : []
@@ -158,7 +159,7 @@ class misProyectos extends React.Component{
                             </div>
                             <div className="card-body">
                                 <blockquote className="blockquote mb-0">
-                                <p>Aun no  hay contenido!</p>
+                                <img className="img"  src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Red_check.svg/1200px-Red_check.svg.png" alt=".."/>
                                 </blockquote>
                                 {this.state.usuario.tipo_usuario === "Experto" ?
                                 <button type="button" className="btn btn-success">Subir Archivos</button> : []
@@ -172,7 +173,7 @@ class misProyectos extends React.Component{
                             </div>
                             <div className="card-body">
                                 <blockquote className="blockquote mb-0">
-                                <p>Aun no  hay contenido!</p>
+                                <img className="img"  src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Red_check.svg/1200px-Red_check.svg.png" alt=".."/>
                                 </blockquote>
                                 {this.state.usuario.tipo_usuario === "Experto" ?
                                 <button type="button" className="btn btn-success">Subir Archivos</button> : []
