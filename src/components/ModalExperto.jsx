@@ -3,7 +3,16 @@ import ReactDOM from 'react-dom'
 import './styles/Modal.css'
 
 function ModalExperto(props){
+    async function mentorizar(){
+        
 
+        props.onClose()
+        
+
+        window.location.reload();
+
+
+    }
     
     if(!props.isOpen){
         return null
@@ -16,7 +25,7 @@ function ModalExperto(props){
                 
                     
                 <div className="button">
-                    <button type="button" href="/Proyectos" className="btn btn-primary">Confirmar</button>  
+                    <button onClick={mentorizar} type="button" href="/Proyectos" className="btn btn-primary">Confirmar</button>  
                 </div>
 
             </div>
