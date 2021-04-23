@@ -101,7 +101,7 @@ class Navbar extends React.Component {
                       []
                       
                     }
-
+{/*  */}
                     <li className="nav-item">
                       <Link className="nav-link" to="/Proyectos">
                         Proyectos
