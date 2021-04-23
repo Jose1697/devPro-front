@@ -1,4 +1,4 @@
-const BASE_URL = 'https://devpro-2021.herokuapp.com';
+const BASE_URL = 'https://devpro-back.herokuapp.com';
 
 
 
@@ -41,7 +41,7 @@ const api = {
 
 
         read(badgeId) {
-            return callApi(`/core/experto/${badgeId}`);
+            return callApi(`/core/proyecto/cliente/${badgeId}/`);
           },
         
         update(badgeId, updates) {

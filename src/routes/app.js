@@ -14,6 +14,7 @@ import FormProyecto from '../components/FormProyecto'
 import ProjectDetails from '../pages/ProjectDetails'
 import Services from '../pages/Services'
 import Suscripcion from '../pages/Suscripcion'
+import Myproject from '../pages/Myproject'
 import misProyectos from '../pages/misProyectos'
 
 const App = () => (
@@ -34,6 +35,7 @@ const App = () => (
             <Route exact path="/newPro" component={FormProyecto}/>
             <Route exact path="/services" component={Services}/>
             <Route exact path="/suscripcion" component={Suscripcion}/>
+            <Route exact path="/Myproject" component={Myproject}/>
             <Route exact path="/myproject" component={misProyectos}/>
         </Switch>
         
