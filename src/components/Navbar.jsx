@@ -93,7 +93,7 @@ class Navbar extends React.Component {
                       (this.state.usuario.tipo_usuario === 'Cliente') || (this.state.usuario.tipo_usuario === 'Experto')?
                         
                         <li className="nav-item">
-                          <Link className="nav-link" to="/myproject">
+                          <Link className="nav-link" to="/miscursos">
                             Mis cursos
                           </Link>
                         </li> : [] 
