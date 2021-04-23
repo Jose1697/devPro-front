@@ -107,6 +107,20 @@ class Navbar extends React.Component {
                         Proyectos
                       </Link>
                     </li>
+                    {
+                      this.state.usuario != null ? 
+                      (this.state.usuario.tipo_usuario === 'Cliente')?
+                        
+                        <li className="nav-item">
+                          <Link className="nav-link" to="/Myproject">
+                          Mis Proyectos
+                          </Link>
+                        </li> : [] 
+                      : 
+                      []
+                      
+                    }
+                  
                   
                     <li className="nav-item">
                       <Link className="nav-link" to="/Expertos">
