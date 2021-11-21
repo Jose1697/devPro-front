@@ -2,6 +2,7 @@ import React from 'react';
 import {Link} from 'react-router-dom';
 import '../components/styles/Register.css';
 import swal from 'sweetalert';
+import Map from './Map';
 
 
 class Register extends React.Component{
@@ -29,13 +30,7 @@ class Register extends React.Component{
 
     handleSubmit = async(event) => {
         event.preventDefault()
-        // if(this.state.form.tipo_usuario === 'Inversionista'){
-        //     await this.setState({
-        //         form:{...this.state.form,
-        //             last_name:'Inversionista'
-        //         }
-        //     }) 
-        // }
+        
         console.log(this.state.form.last_name);
         
         await fetch('https://devpro-back.herokuapp.com/usuario/usuario/register/', {
@@ -168,6 +163,15 @@ class Register extends React.Component{
                         </Link>
                     </p>
                     
+                </div>
+                <div>
+                  <Map
+                    googleMapURL= "https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyBDaeWicvigtP9xPv919E-RNoxfvC-Hqik"
+                    containerElement = {<div style={{height: '400px'}}/>}
+                    mapElement={<div style={{height:'100%'}}/>}
+                    loadingElement={<p>Cargando</p>}
+
+                  />
                 </div>
 
             </section>

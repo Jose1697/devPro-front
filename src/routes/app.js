@@ -16,6 +16,7 @@ import Services from '../pages/Services'
 import Suscripcion from '../pages/Suscripcion'
 import Myproject from '../pages/Myproject'
 import misProyectos from '../pages/misProyectos'
+import Map from '../pages/Map'
 
 const App = () => (
     <BrowserRouter>
@@ -36,7 +37,8 @@ const App = () => (
             <Route exact path="/services" component={Services}/>
             <Route exact path="/suscripcion" component={Suscripcion}/>
             <Route exact path="/Myproject" component={Myproject}/>
-            <Route exact path="/miscursos" component={misProyectos}/ >
+            <Route exact path="/miscursos" component={misProyectos}/>
+            <Route exact path="/map" component={Map}/>
         </Switch>
         
             

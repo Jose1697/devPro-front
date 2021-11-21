@@ -2,6 +2,7 @@ import React from 'react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import '../components/styles/contacto.css'
+import { Link } from 'react-router-dom';
 
 class Contacto extends React.Component {
     render() {
@@ -48,7 +49,11 @@ class Contacto extends React.Component {
                             
 
                         </div>
-
+                        <div className="toMap">
+                          <p>Ubica nuestras sedes para llegar a nuestras instalaciones 
+                            <Link className="toMaps" to="/map"><b> AQUÍ</b></Link> 
+                          </p>
+                        </div>
                         
                     </div>
 
