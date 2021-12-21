@@ -164,16 +164,6 @@ class Register extends React.Component{
                     </p>
                     
                 </div>
-                <div>
-                  <Map
-                    googleMapURL= "https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyBDaeWicvigtP9xPv919E-RNoxfvC-Hqik"
-                    containerElement = {<div style={{height: '400px'}}/>}
-                    mapElement={<div style={{height:'100%'}}/>}
-                    loadingElement={<p>Cargando</p>}
-
-                  />
-                </div>
-
             </section>
         )
 
